@@ -185,7 +185,7 @@ $(document).ready(function() {
                 "height" : $(".tabs:eq("+ indexTabs +") .tab-nav li label:eq("+ indexActiveTab +")").outerHeight() + "px",
                 "top" : $(".tabs:eq("+ indexTabs +") .tab-nav li label:eq("+ indexActiveTab +")").offset().top - $(".tabs:eq("+ indexTabs +") .tab-nav").offset().top + "px",
                 "left" : $(".tabs:eq("+ indexTabs +") .tab-nav li label:eq("+ indexActiveTab +")").offset().left - $(".tabs:eq("+ indexTabs +") .tab-nav").offset().left + "px"
-            }, 300);
+            },700);
 
         // }
 
