@@ -6,14 +6,16 @@ $(document).ready(function() {
 
     // --------------------------
 
-    var indexActiveSlide;
-    var indexActiveSlide = 0;
+    // var indexActiveSlide = 0;
+
+    // var indexActiveTab;
+    var indexActiveTab = 0;
 
     // --------------------------
 
     // getPaddingTopPromoSection();
 
-    getActiveSlideBgPosition(indexActiveSlide);
+    // getActiveSlideBgPosition(indexActiveSlide);
 
 
     $(window).resize(function() {
@@ -33,7 +35,7 @@ $(document).ready(function() {
 
         getNavTriangleSize();
 
-        getActiveSlideBgPosition(indexActiveSlide);
+        // getActiveSlideBgPosition(indexActiveSlide);
 
     });
 
@@ -128,18 +130,11 @@ $(document).ready(function() {
 
     $(function() {
 
-        if( $(".promo-slider").length > 0 ) {
+        if( $(".tabs-content-box .tab").length > 0 ) {
 
-            $(".promo_slider_nav").append("<span class='active_bg'></span>");
+            $(".tab-nav").append("<span class='active_bg'></span>");
 
-            // $(".slider-nav-block .active_bg").css({
-            //     "width" : $(".slider-nav li a:eq("+ 0 +")").outerWidth() + "px",
-            //     "height" : $(".slider-nav li a:eq("+ 0 +")").outerHeight() + "px",
-            //     "top" : $(".slider-nav li a:eq("+ 0 +")").offset().top - $(".slider-nav-block").offset().top + "px",
-            //     "left" : $(".slider-nav li a:eq("+ 0 +")").offset().left - $(".slider-nav-block").offset().left + "px"
-            // });
-
-            getActiveSlideBgPosition(indexActiveSlide);
+            getActiveSlideBgPosition(indexActiveTab);
 
         }
 
@@ -147,32 +142,75 @@ $(document).ready(function() {
 
     $(function() {
 
-        $(".slider-nav li a").click(function(promoSliderEvent) {
+        $(".tab-nav li label").click(function() {
 
-            promoSliderEvent.preventDefault();
+            indexActiveTab = $(".tab-nav li label").index(this);
 
-            indexActiveSlide = $(".slider-nav li a").index(this);
+            // $(".promo-slider-box .slick-dots li:eq("+ indexActiveSlide +")").click();
 
-            $(".promo-slider-box .slick-dots li:eq("+ indexActiveSlide +")").click();
+            getActiveSlideBgPosition(indexActiveTab);
 
         });
 
     });
 
-    function getActiveSlideBgPosition(indexActiveSlide) {
+    function getActiveSlideBgPosition(indexActiveTab) {
 
-        if( $(".promo-slider").length > 0 ) {
+        // if( $(".tabs-content-box .tab").length > 0 ) {
 
-            $(".slider-nav-block .active_bg").css({
-                "width" : $(".slider-nav li a:eq("+ indexActiveSlide +")").outerWidth() + "px",
-                "height" : $(".slider-nav li a:eq("+ indexActiveSlide +")").outerHeight() + "px",
-                "top" : $(".slider-nav li a:eq("+ indexActiveSlide +")").offset().top - $(".slider-nav-block").offset().top + "px",
-                "left" : $(".slider-nav li a:eq("+ indexActiveSlide +")").offset().left - $(".slider-nav-block").offset().left + "px"
-            });
+            $(".tab-nav .active_bg").animate({
+                "width" : $(".tab-nav li label:eq("+ indexActiveTab +")").outerWidth() + "px",
+                "height" : $(".tab-nav li label:eq("+ indexActiveTab +")").outerHeight() + "px",
+                "top" : $(".tab-nav li label:eq("+ indexActiveTab +")").offset().top - $(".tab-nav").offset().top + "px",
+                "left" : $(".tab-nav li label:eq("+ indexActiveTab +")").offset().left - $(".tab-nav").offset().left + "px"
+            }, 300);
 
-        }
+        // }
 
     }
+
+    //----------------------------
+
+    // $(function() {
+
+    //     if( $(".promo-slider").length > 0 ) {
+
+    //         $(".promo_slider_nav").append("<span class='active_bg'></span>");
+
+    //         getActiveSlideBgPosition(indexActiveSlide);
+
+    //     }
+
+    // });
+
+    // $(function() {
+
+    //     $(".slider-nav li a").click(function(promoSliderEvent) {
+
+    //         promoSliderEvent.preventDefault();
+
+    //         indexActiveSlide = $(".slider-nav li a").index(this);
+
+    //         $(".promo-slider-box .slick-dots li:eq("+ indexActiveSlide +")").click();
+
+    //     });
+
+    // });
+
+    // function getActiveSlideBgPosition(indexActiveSlide) {
+
+    //     if( $(".promo-slider").length > 0 ) {
+
+    //         $(".slider-nav-block .active_bg").css({
+    //             "width" : $(".slider-nav li a:eq("+ indexActiveSlide +")").outerWidth() + "px",
+    //             "height" : $(".slider-nav li a:eq("+ indexActiveSlide +")").outerHeight() + "px",
+    //             "top" : $(".slider-nav li a:eq("+ indexActiveSlide +")").offset().top - $(".slider-nav-block").offset().top + "px",
+    //             "left" : $(".slider-nav li a:eq("+ indexActiveSlide +")").offset().left - $(".slider-nav-block").offset().left + "px"
+    //         });
+
+    //     }
+
+    // }
 
     // ----------------------------
 
