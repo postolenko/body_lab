@@ -16,10 +16,9 @@
 	<link rel="stylesheet" type="text/css" href="slick/slick.css">
 	<link rel="stylesheet" type="text/css" href="vendors/css/animate.css">	
 	<script type="text/javascript" src="vendors/js/jquery.js"></script>
-	<!--[if lt IE 8]>
-		<script type="text/javascript" src="vendors/js/jquery_1.js"></script>
+
+		<!-- <script type="text/javascript" src="vendors/js/jquery_1.js"></script> -->
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
 	<script type="text/javascript" src="vendors/js/modernizr_custom.js"></script>
 	<script type="text/javascript" src="slick/slick.js"></script>
 	<script type="text/javascript" src="vendors/js/wow.min.js"></script>
@@ -98,7 +97,20 @@
 
 						<div class="promo-slider">
 							<div class="slide">
-								<img src="img/slider/video_bg_1.jpg" alt="">
+								<!-- <img src="img/slider/video_bg_1.jpg" alt=""> -->
+								<!-- <div class="video-box"> -->
+
+									<video autoplay="autoplay" loop="loop" muted="muted" id="theVideo">
+										
+										<source src="video/videoplayback.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+										<source src="video/videoplayback.webm" type='video/webm; codecs="vp8, vorbis"'>
+										<source src="video/videoplayback.ogv" type='video/ogg; codecs="theora, vorbis"'>
+										Тег video не поддерживается вашим браузером. 
+										<a href="video/videoplayback.mp4">Скачайте видео</a>.
+
+									</video>
+
+								<!-- </div> -->
 							</div>
 							<div class="slide">
 								<img src="img/slider/video_bg_2.jpg" alt="">
@@ -675,7 +687,7 @@
 			  speed: 700,
 			  slidesToShow: 1,
 			  fade: true,
-			  autoplay: true,
+			  // autoplay: true,
 			  autoplaySpeed: 16000
 			});
 
