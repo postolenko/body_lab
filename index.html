@@ -14,14 +14,16 @@
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 	<link rel="stylesheet" type="text/css" href="css/responsive.css">
 	<link rel="stylesheet" type="text/css" href="slick/slick.css">
-	<link rel="stylesheet" type="text/css" href="vendors/css/animate.css">	
+	<link rel="stylesheet" type="text/css" href="vendors/css/animate.css">
+	<!-- <link rel="stylesheet" href="vendors/css/jquery.mCustomScrollbar.css"> -->
 	<script type="text/javascript" src="vendors/js/jquery.js"></script>
-
 		<!-- <script type="text/javascript" src="vendors/js/jquery_1.js"></script> -->
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<script type="text/javascript" src="vendors/js/modernizr_custom.js"></script>
+		<!-- <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> -->
+	<!-- <script type="text/javascript" src="vendors/js/modernizr_custom.js"></script> -->
 	<script type="text/javascript" src="slick/slick.js"></script>
+	<script src="vendors/js/smoothscroll.js"></script>
 	<script type="text/javascript" src="vendors/js/wow.min.js"></script>
+	<!-- <script src="vendors/js/jquery.mCustomScrollbar.concat.min.js"></script> -->
 	<script>new WOW().init();</script>
 	<link rel="icon" type="image/png" href="favicon/favicon.ico" sizes="16x16">	
 	<title>Body Lab</title>	
@@ -43,10 +45,22 @@
 					</a>
 				</div>
 
-				<div class="col col-2">
+				<div class="respmenubtn-box">
+									
+					<button class="respmenubtn">
+						
+						<span></span>
+						<span></span>
+						<span></span>
+
+					</button>
+
+				</div>
+
+				<div class="col col-2 main-nav-sect scroll">
 					<div class="main-nav-block">
 						<ul class="main-nav">
-							<li><a href="#">Home</a></li>
+							<li><a href="#" class="active">Home</a></li>
 							<li><a href="#">Classes</a></li>
 							<li><a href="#">Timetable</a></li>
 							<li><a href="#">Team</a></li>
@@ -72,13 +86,22 @@
 						</ul>
 					</div>
 
+				<!-- 	<div class="switch-lang-block">
+						<ul class="switch-lang">
+							<li><a href="#" class="active"><span>En</span></a></li>
+							<li><a href="#"><span>Cn</span></a></li>
+						</ul>
+					</div> -->
+
+				</div>
+
+				<div class="col col-4">
 					<div class="switch-lang-block">
 						<ul class="switch-lang">
-							<li><a href="#" class="active">En</a></li>
-							<li><a href="#">Cn</a></li>
+							<li><a href="#" class="active"><span>En</span></a></li>
+							<li><a href="#"><span>Cn</span></a></li>
 						</ul>
 					</div>
-
 				</div>
 
 			</div>
@@ -96,43 +119,45 @@
 					<div class="promo-slider-box">
 
 						<div class="promo-slider">
-							<div class="slide">
-								<!-- <img src="img/slider/video_bg_1.jpg" alt=""> -->
-								<!-- <div class="video-box"> -->
+							<div class="slide orange-light-bottom">
+								<img src="img/slider/video_bg_1.jpg" alt="">
+								<video autoplay="autoplay" loop="loop" muted="muted" id="theVideo1">
+									<source src="video/videoplayback_1.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+									<source src="video/videoplayback_1.webm" type='video/webm; codecs="vp8, vorbis"'>
+									<source src="video/videoplayback_1.ogv" type='video/ogg; codecs="theora, vorbis"'>
+									Тег video не поддерживается вашим браузером. 
+									<a href="video/videoplayback_1.mp4">Скачайте видео</a>.
+								</video>
 
-									<video autoplay="autoplay" loop="loop" muted="muted" id="theVideo">
-										
-										<source src="video/videoplayback.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-										<source src="video/videoplayback.webm" type='video/webm; codecs="vp8, vorbis"'>
-										<source src="video/videoplayback.ogv" type='video/ogg; codecs="theora, vorbis"'>
-										Тег video не поддерживается вашим браузером. 
-										<a href="video/videoplayback.mp4">Скачайте видео</a>.
+								<div class="center-block offset-ziro">
+									<div class="center-block-content">
+										<button type="button" class="play-btn">
+											<!-- <img src="img/play_button.svg" alt=""> -->
+											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 109.126 109.126" xml:space="preserve" width="40px" height="40px">
+											<g>
+												<path d="M98.901,47.663L18.197,1.068c-2.467-1.424-5.502-1.424-7.972,0C7.762,2.491,6.243,5.124,6.243,7.971v93.188   c0,2.848,1.522,5.479,3.982,6.9c1.236,0.713,2.61,1.067,3.986,1.067c1.374,0,2.751-0.354,3.983-1.067l80.704-46.594   c2.466-1.422,3.984-4.054,3.984-6.9C102.887,51.719,101.366,49.088,98.901,47.663z" fill="#FFFFFF"/>
+											</g>
+											</svg>
+										</button>
+										<h2>Watch video about us</h2>
+										<a href="#" class="more-link"><span>More info</span></a>
+									</div>
+								</div>
 
-									</video>
-
-								<!-- </div> -->
 							</div>
-							<div class="slide">
+							<!-- <div class="slide">
 								<img src="img/slider/video_bg_2.jpg" alt="">
-							</div>
-							<div class="slide">
-								<img src="img/slider/video_bg_3.jpg" alt="">
-							</div>
-							<div class="slide">
-								<img src="img/slider/video_bg_4.jpg" alt="">
-							</div>
+								<video autoplay="autoplay" loop="loop" muted="muted" id="theVideo2">					
+									<source src="video/videoplayback_2.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+									Тег video не поддерживается вашим браузером. 
+									<a href="video/videoplayback_2.mp4">Скачайте видео</a>.
+								</video>
+							</div> -->
 						</div>
 
 					</div>
 
-					<div class="center-block offset-ziro">
-						<div class="center-block-content">
-							<button type="button" class="play-btn">
-								<img src="img/play_button.svg" alt="">
-							</button>
-							<h2>Watch video about us</h2>
-						</div>
-					</div>
+					
 <!-- 
 					<div class="slider-nav-block promo_slider_nav">
 
@@ -145,218 +170,251 @@
 
 					</div> -->
 
+
+					<div class="popups-section">
+						<div class="popup-bg"></div>
+						<button type="button" class="close-slide-popup">&#10006;</button>
+
+						<div class="popup-block" data-index-actie-slide = "0">
+							<div class="popup">
+								<video loop="loop" muted="muted" id="popup_Video1" controls>									
+									<source src="video/videoplayback_1.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+									<source src="video/videoplayback_1.webm" type='video/webm; codecs="vp8, vorbis"'>
+									<source src="video/videoplayback_1.ogv" type='video/ogg; codecs="theora, vorbis"'>
+									Тег video не поддерживается вашим браузером. 
+									<a href="video/videoplayback_1.mp4">Скачайте видео</a>.
+
+								</video>
+							</div>
+						</div>
+
+						<!-- <div class="popup-block" data-index-actie-slide = "1">
+							<div class="popup">
+								<video loop="loop" muted="muted" id="popup_Video2">					
+									<source src="video/videoplayback_2.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+									Тег video не поддерживается вашим браузером. 
+									<a href="video/videoplayback_2.mp4">Скачайте видео</a>.
+
+								</video>
+							</div>
+						</div> -->
+
+					</div>
+
+
 				</div>
 
 				<!-- /Main Page Section 1 -->
 
 				<!-- Main Page Section 2 -->
 
-					<div class="section section-2 section-shape">
+					<div class="section tab-section section-2 section-shape">
 						
 						<div class="row">
 
 							<div class="tabs top-minus">
 
-								<div class="tab-nav-block">
+								<!-- <div class="tabs-wrapp"> -->
 
-									<ul class="tab-nav row">
-										<li><label for="tab_1_2"><span>Fitness program</span></label></li>
-										<li><label for="tab_2_2"><span>Children's programs</span></label></li>
-										<li><label for="tab_3_2"><span>Adult Dance program</span></label></li>
-										<li><label for="tab_4_2"><span>Yoga health & wellness</span></label></li>
-									</ul>
+									<div class="tab-nav-block">
 
-								</div>
+										<ul class="tab-nav row">
+											<li><button type="button" class="tab-link" data-tab-link-index="0"><span>Adult Dance program</span></button></li>
+											<li><button type="button" class="tab-link active" data-tab-link-index="1"><span>Children's programs</span></button></li>
+											<li><button type="button" class="tab-link" data-tab-link-index="2"><span>Fitness program</span></button></li>
+											<li><button type="button" class="tab-link" data-tab-link-index="3"><span>Yoga health & wellness</span></button></li>
+										</ul>
 
-								<div class="tabs-content-box">
-								
-									<div class="tab">
-										<input type="radio" id="tab_1_2" name="classes_tabs_2" checked>
-										<div class="tab-content">
-											<div class="thumbnails classes-thumbnails thumb-380 offset-ziro">
-												
-												<div class="thumbnail">
-													<a href="#" class="inner">
-														<div class="img-box">
-															<img src="img/classes/photo_01.jpg" alt="">
-														</div>
-														<div class="descript">
-															<p class="p-1">Zumba</p>
-															<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
-														</div>
-													</a>
-												</div>
-
-												<div class="thumbnail">
-													<a href="#" class="inner">
-														<div class="img-box">
-															<img src="img/classes/photo_02.jpg" alt="">
-														</div>
-														<div class="descript">
-															<p class="p-1">Stretch fit</p>
-															<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
-														</div>
-													</a>
-												</div>
-
-												<div class="thumbnail">
-													<a href="#" class="inner">
-														<div class="img-box">
-															<img src="img/classes/photo_03.jpg" alt="">
-														</div>
-														<div class="descript">
-															<p class="p-1">Core training</p>
-															<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
-														</div>
-													</a>
-												</div>
-
-												<div class="thumbnail">
-													<a href="#" class="inner">
-														<div class="img-box">
-															<img src="img/classes/photo_04.jpg" alt="">
-														</div>
-														<div class="descript">
-															<p class="p-1">Strong by Zumba</p>
-															<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
-														</div>
-													</a>
-												</div>
-
-												<div class="thumbnail">
-													<a href="#" class="inner">
-														<div class="img-box">
-															<img src="img/classes/photo_05.jpg" alt="">
-														</div>
-														<div class="descript">
-															<p class="p-1">Functional training</p>
-															<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
-														</div>
-													</a>
-												</div>
-
-											</div>
-										</div>
 									</div>
 
-									<div class="tab">
-										<input type="radio" id="tab_2_2" name="classes_tabs_2">
-										<div class="tab-content">
-											<div class="thumbnails classes-thumbnails thumb-380 offset-ziro">
-												<div class="thumbnail">
-													<a href="#" class="inner">
-														<div class="img-box">
-															<img src="img/classes/photo_01.jpg" alt="">
-														</div>
-														<div class="descript">
-															<p class="p-1">Zumba</p>
-															<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
-														</div>
-													</a>
-												</div>
+									<div class="tabs-content-box">
+									
+										<div class="tab" data-tab-link="0">
+											<div class="tab-content">
+												<div class="thumbnails classes-thumbnails thumb-380 offset-ziro">
+													
+													<div class="thumbnail">
+														<a href="#" class="inner">
+															<div class="img-box">
+																<img src="img/classes/photo_01.jpg" alt="">
+															</div>
+															<div class="descript">
+																<p class="p-1">Zumba</p>
+																<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
+															</div>
+														</a>
+													</div>
 
-												<div class="thumbnail">
-													<a href="#" class="inner">
-														<div class="img-box">
-															<img src="img/classes/photo_02.jpg" alt="">
-														</div>
-														<div class="descript">
-															<p class="p-1">Stretch fit</p>
-															<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
-														</div>
-													</a>
-												</div>
+													<div class="thumbnail">
+														<a href="#" class="inner">
+															<div class="img-box">
+																<img src="img/classes/photo_02.jpg" alt="">
+															</div>
+															<div class="descript">
+																<p class="p-1">Stretch fit</p>
+																<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
+															</div>
+														</a>
+													</div>
 
-												<div class="thumbnail">
-													<a href="#" class="inner">
-														<div class="img-box">
-															<img src="img/classes/photo_03.jpg" alt="">
-														</div>
-														<div class="descript">
-															<p class="p-1">Core training</p>
-															<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
-														</div>
-													</a>
+													<div class="thumbnail">
+														<a href="#" class="inner">
+															<div class="img-box">
+																<img src="img/classes/photo_03.jpg" alt="">
+															</div>
+															<div class="descript">
+																<p class="p-1">Core training</p>
+																<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
+															</div>
+														</a>
+													</div>
+
+													<div class="thumbnail">
+														<a href="#" class="inner">
+															<div class="img-box">
+																<img src="img/classes/photo_04.jpg" alt="">
+															</div>
+															<div class="descript">
+																<p class="p-1">Strong by Zumba</p>
+																<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
+															</div>
+														</a>
+													</div>
+
+													<div class="thumbnail">
+														<a href="#" class="inner">
+															<div class="img-box">
+																<img src="img/classes/photo_05.jpg" alt="">
+															</div>
+															<div class="descript">
+																<p class="p-1">Functional training</p>
+																<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
+															</div>
+														</a>
+													</div>
+
 												</div>
 											</div>
 										</div>
-									</div>
 
-									<div class="tab">
-										<input type="radio" id="tab_3_2" name="classes_tabs_2">
-										<div class="tab-content">
-											<div class="thumbnails classes-thumbnails thumb-380 offset-ziro">
-												<div class="thumbnail">
-													<a href="#" class="inner">
-														<div class="img-box">
-															<img src="img/classes/photo_03.jpg" alt="">
-														</div>
-														<div class="descript">
-															<p class="p-1">Core training</p>
-															<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
-														</div>
-													</a>
-												</div>
+										<div class="tab" data-tab-link="1">
+											<div class="tab-content">
+												<div class="thumbnails classes-thumbnails thumb-380 offset-ziro">
+													<div class="thumbnail">
+														<a href="#" class="inner">
+															<div class="img-box">
+																<img src="img/classes/photo_01.jpg" alt="">
+															</div>
+															<div class="descript">
+																<p class="p-1">Zumba</p>
+																<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
+															</div>
+														</a>
+													</div>
 
-												<div class="thumbnail">
-													<a href="#" class="inner">
-														<div class="img-box">
-															<img src="img/classes/photo_04.jpg" alt="">
-														</div>
-														<div class="descript">
-															<p class="p-1">Strong by Zumba</p>
-															<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
-														</div>
-													</a>
-												</div>
+													<div class="thumbnail">
+														<a href="#" class="inner">
+															<div class="img-box">
+																<img src="img/classes/photo_02.jpg" alt="">
+															</div>
+															<div class="descript">
+																<p class="p-1">Stretch fit</p>
+																<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
+															</div>
+														</a>
+													</div>
 
-												<div class="thumbnail">
-													<a href="#" class="inner">
-														<div class="img-box">
-															<img src="img/classes/photo_05.jpg" alt="">
-														</div>
-														<div class="descript">
-															<p class="p-1">Functional training</p>
-															<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
-														</div>
-													</a>
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<div class="tab">
-										<input type="radio" id="tab_4_2" name="classes_tabs_2">
-										<div class="tab-content">
-											<div class="thumbnails classes-thumbnails thumb-380 offset-ziro">
-												<div class="thumbnail">
-													<a href="#" class="inner">
-														<div class="img-box">
-															<img src="img/classes/photo_03.jpg" alt="">
-														</div>
-														<div class="descript">
-															<p class="p-1">Core training</p>
-															<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
-														</div>
-													</a>
-												</div>
-
-												<div class="thumbnail">
-													<a href="#" class="inner">
-														<div class="img-box">
-															<img src="img/classes/photo_04.jpg" alt="">
-														</div>
-														<div class="descript">
-															<p class="p-1">Strong by Zumba</p>
-															<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
-														</div>
-													</a>
+													<div class="thumbnail">
+														<a href="#" class="inner">
+															<div class="img-box">
+																<img src="img/classes/photo_03.jpg" alt="">
+															</div>
+															<div class="descript">
+																<p class="p-1">Core training</p>
+																<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
+															</div>
+														</a>
+													</div>
 												</div>
 											</div>
 										</div>
+
+										<div class="tab" data-tab-link="2">
+											<div class="tab-content">
+												<div class="thumbnails classes-thumbnails thumb-380 offset-ziro">								
+													<div class="thumbnail">
+														<a href="#" class="inner">
+															<div class="img-box">
+																<img src="img/classes/photo_01.jpg" alt="">
+															</div>
+															<div class="descript">
+																<p class="p-1">Zumba</p>
+																<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
+															</div>
+														</a>
+													</div>
+
+													<div class="thumbnail">
+														<a href="#" class="inner">
+															<div class="img-box">
+																<img src="img/classes/photo_02.jpg" alt="">
+															</div>
+															<div class="descript">
+																<p class="p-1">Stretch fit</p>
+																<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
+															</div>
+														</a>
+													</div>
+
+													<div class="thumbnail">
+														<a href="#" class="inner">
+															<div class="img-box">
+																<img src="img/classes/photo_03.jpg" alt="">
+															</div>
+															<div class="descript">
+																<p class="p-1">Core training</p>
+																<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
+															</div>
+														</a>
+													</div>
+
+												</div>											
+											</div>
+										</div>
+
+										<div class="tab" data-tab-link="3">
+											<div class="tab-content">
+												<div class="thumbnails classes-thumbnails thumb-380 offset-ziro">
+													<div class="thumbnail">
+														<a href="#" class="inner">
+															<div class="img-box">
+																<img src="img/classes/photo_03.jpg" alt="">
+															</div>
+															<div class="descript">
+																<p class="p-1">Core training</p>
+																<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
+															</div>
+														</a>
+													</div>
+
+													<div class="thumbnail">
+														<a href="#" class="inner">
+															<div class="img-box">
+																<img src="img/classes/photo_04.jpg" alt="">
+															</div>
+															<div class="descript">
+																<p class="p-1">Strong by Zumba</p>
+																<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
+															</div>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+
 									</div>
 
-								</div>
+								<!-- </div> -->
 
 							</div>
 
@@ -378,7 +436,7 @@
 
 						<div class="teachers-slider-box">
 							<div class="teachers-slider">
-								<div class="slide">
+								<div class="slide teacher-thumbnail">
 									<a href="#" class="thumb">
 										<div class="img-box">
 											<img src="img/teachers/photo_01.png" alt="">
@@ -387,7 +445,7 @@
 									</a>
 								</div>
 
-								<div class="slide">
+								<div class="slide teacher-thumbnail">
 									<a href="#" class="thumb">
 										<div class="img-box">
 											<img src="img/teachers/photo_02.png" alt="">
@@ -396,7 +454,7 @@
 									</a>
 								</div>
 
-								<div class="slide">
+								<div class="slide teacher-thumbnail">
 									<a href="#" class="thumb">
 										<div class="img-box">
 											<img src="img/teachers/photo_03.png" alt="">
@@ -405,7 +463,7 @@
 									</a>
 								</div>
 
-								<div class="slide">
+								<div class="slide teacher-thumbnail">
 									<a href="#" class="thumb">
 										<div class="img-box">
 											<img src="img/teachers/photo_04.png" alt="">
@@ -414,7 +472,7 @@
 									</a>
 								</div>
 
-								<div class="slide">
+								<div class="slide teacher-thumbnail">
 									<a href="#" class="thumb">
 										<div class="img-box">
 											<img src="img/teachers/photo_05.png" alt="">
@@ -423,7 +481,7 @@
 									</a>
 								</div>
 
-								<div class="slide">
+								<div class="slide teacher-thumbnail">
 									<a href="#" class="thumb">
 										<div class="img-box">
 											<img src="img/teachers/photo_01.png" alt="">
@@ -432,7 +490,7 @@
 									</a>
 								</div>
 
-								<div class="slide">
+								<div class="slide teacher-thumbnail">
 									<a href="#" class="thumb">
 										<div class="img-box">
 											<img src="img/teachers/photo_02.png" alt="">
@@ -441,7 +499,7 @@
 									</a>
 								</div>
 
-								<div class="slide">
+								<div class="slide teacher-thumbnail">
 									<a href="#" class="thumb">
 										<div class="img-box">
 											<img src="img/teachers/photo_03.png" alt="">
@@ -450,7 +508,7 @@
 									</a>
 								</div>
 
-								<div class="slide">
+								<div class="slide teacher-thumbnail">
 									<a href="#" class="thumb">
 										<div class="img-box">
 											<img src="img/teachers/photo_04.png" alt="">
@@ -459,7 +517,7 @@
 									</a>
 								</div>
 
-								<div class="slide">
+								<div class="slide teacher-thumbnail">
 									<a href="#" class="thumb">
 										<div class="img-box">
 											<img src="img/teachers/photo_05.png" alt="">
@@ -476,7 +534,7 @@
 
 				<!-- Main Page Section 4 -->
 
-					<div class="section-4">
+					<div class="section section-4 blue-light">
 						
 						<div class="row">
 							
@@ -581,7 +639,7 @@
 
 				<!-- Main Page Section 6 -->
 
-				<div class="section-6">
+				<div class="section-6 card-section">
 					<div class="row">
 						<div class="h-grpup">
 							<h2>Cards</h2>
@@ -592,8 +650,10 @@
 
 							<div class="thumbnail">
 								<div class="inner">
-									<div class="img-box">
-										<img src="img/cards/card_01.jpg" alt="">
+									<div class="card-img-block">
+										<div class="img-box">
+											<img class="card" src="img/cards/card_01.jpg" alt="">
+										</div>
 									</div>
 									<p class="p-1">Family card</p>
 								</div>
@@ -601,8 +661,10 @@
 
 							<div class="thumbnail">
 								<div class="inner">
-									<div class="img-box">
-										<img src="img/cards/card_02.jpg" alt="">
+									<div class="card-img-block">
+										<div class="img-box">
+											<img class="card" src="img/cards/card_02.jpg" alt="">
+										</div>
 									</div>
 									<p class="p-1">Adult card</p>
 								</div>
@@ -610,8 +672,10 @@
 
 							<div class="thumbnail">
 								<div class="inner">
-									<div class="img-box">
-										<img src="img/cards/card_03.jpg" alt="">
+									<div class="card-img-block">
+										<div class="img-box">
+											<img class="card" src="img/cards/card_03.jpg" alt="">
+										</div>
 									</div>
 									<p class="p-1">Children's card</p>
 								</div>
@@ -619,8 +683,10 @@
 
 							<div class="thumbnail">
 								<div class="inner">
-									<div class="img-box">
-										<img src="img/cards/card_04.jpg" alt="">
+									<div class="card-img-block">
+										<div class="img-box">
+											<img class="card" src="img/cards/card_04.jpg" alt="">
+										</div>
 									</div>
 									<p class="p-1">vip card</p>
 								</div>
@@ -629,6 +695,145 @@
 						</div>
 
 					</div>
+
+					<div class="popups-cards-sect">
+						<div class="popup-card-bg"></div>
+
+						<div class="card-popup-box">
+
+							<div class="card-popup">
+								<div class="inner">
+
+									<div class="card-popup-header">
+										<h2>Adult card</h2>
+										<button type="button" class="close-card-popup"></button>
+									</div>
+
+									<div class="card-content">
+										<div class="card-table">							
+											<div class="card-table-row">
+												<div class="cell">
+													<h3>Cart Type</h3>
+												</div>
+												<div class="cell">
+													<h3>Times</h3>
+												</div>
+												<div class="cell">
+													<h3>Prise / Time<br />(RMB)</h3>
+												</div>
+												<div class="cell">
+													<h3>Total Prise<br />(RMB)</h3>
+												</div>
+											</div>
+											<div class="card-table-row">
+												<div class="cell">
+													<p>Drop In</p>
+												</div>
+												<div class="cell">
+													<p>1</p>
+												</div>
+												<div class="cell">
+													<p>250</p>
+												</div>
+												<div class="cell">
+													<p>250</p>
+												</div>
+											</div>
+											<div class="card-table-row">
+												<div class="cell">
+													<p>2 Month</p>
+												</div>
+												<div class="cell">
+													<p>10</p>
+												</div>
+												<div class="cell">
+													<p>200</p>
+												</div>
+												<div class="cell">
+													<p>2000</p>
+												</div>
+											</div>
+											<div class="card-table-row">
+												<div class="cell">
+													<p></p>
+												</div>
+												<div class="cell">
+													<p></p>
+												</div>
+												<div class="cell">
+													<p></p>
+												</div>
+												<div class="cell">
+													<p></p>
+												</div>
+											</div>
+											<div class="card-table-row">
+												<div class="cell">
+													<p>4 Month</p>
+												</div>
+												<div class="cell">
+													<p>20</p>
+												</div>
+												<div class="cell">
+													<p>180</p>
+												</div>
+												<div class="cell">
+													<p>3600</p>
+												</div>
+											</div>
+											<div class="card-table-row">
+												<div class="cell">
+													<p>6 Month</p>
+												</div>
+												<div class="cell">
+													<p>50</p>
+												</div>
+												<div class="cell">
+													<p>150</p>
+												</div>
+												<div class="cell">
+													<p>7500</p>
+												</div>
+											</div>
+											<div class="card-table-row">
+												<div class="cell">
+													<p>10 Month</p>
+												</div>
+												<div class="cell">
+													<p>80</p>
+												</div>
+												<div class="cell">
+													<p>130</p>
+												</div>
+												<div class="cell">
+													<p>10400</p>
+												</div>
+											</div>
+											<div class="card-table-row">
+												<div class="cell">
+													<p>1 Year</p>
+												</div>
+												<div class="cell">
+													<p>130</p>
+												</div>
+												<div class="cell">
+													<p>100</p>
+												</div>
+												<div class="cell">
+													<p>13000</p>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
 				</div>
 
 				<!-- /Main Page Section 6 -->
@@ -682,27 +887,38 @@
 
 		<script type="text/javascript">
 
+
+			// (function($){
+
+			// 	$(window).on("load",function(){
+
+			// 		$(".scroll").mCustomScrollbar();
+
+			// 	});
+
+			// })(jQuery);
+
 			$(".promo-slider").slick({
 			  dots: false,
 			  speed: 700,
 			  slidesToShow: 1,
 			  fade: true,
-			  // autoplay: true,
-			  autoplaySpeed: 16000
+			  autoplay: true,
+			  autoplaySpeed: 3000,
+			  zIndex: 1
 			});
 
-			// $(".promo-slider").on('afterChange', function(event, slick, currentSlide, nextSlide){
+			$(".promo-slider").on('afterChange', function(event, slick, currentSlide){
 
-			// 	$(".slider-nav-block .active_bg").animate({
-			// 		"width" : $(".slider-nav li a:eq("+ currentSlide +")").outerWidth() + "px",
-			// 		"height" : $(".slider-nav li a:eq("+ currentSlide +")").outerHeight() + "px",
-			// 		"top" : $(".slider-nav li a:eq("+ currentSlide +")").offset().top - $(".slider-nav-block").offset().top + "px",
-			// 		"left" : $(".slider-nav li a:eq("+ currentSlide +")").offset().left - $(".slider-nav-block").offset().left + "px"
-			// 	}, 600);
+        		$(".promo-slider .slide video").each(function() {
+        			videoId =  window[$(this).attr("id")];
+        			videoId.pause();
+        		});
 
-			// 	indexActiveSlide = currentSlide;
+        		videoId =  window[$(".promo-slider .slide:eq("+ currentSlide +") video").attr("id")];
+        		videoId.play();
 
-			// });
+			});
 
 			$(".teachers-slider").slick({
 			  dots: false,
@@ -710,9 +926,38 @@
 			  slidesToShow: 5,
 			  slidesToScroll: 2,
 			  autoplay: true,
-			  autoplaySpeed: 16000
+			  autoplaySpeed: 16000,
+			    responsive: [
+			    {
+			      breakpoint: 1400,
+			      settings: {
+			        slidesToShow: 4,
+			        slidesToScroll: 2
+			      }
+			    },
+			    {
+			      breakpoint: 1200,
+			      settings: {
+			        slidesToShow: 3,
+			        slidesToScroll: 1
+			      }
+			    },
+			    {
+			      breakpoint: 850,
+			      settings: {
+			        slidesToShow: 2,
+			        slidesToScroll: 1
+			      }
+			    },
+			    {
+			      breakpoint: 580,
+			      settings: {
+			        slidesToShow: 1,
+			        slidesToScroll: 1
+			      }
+			    }
+			  ]
 			});
-
 
 		</script>
 	
