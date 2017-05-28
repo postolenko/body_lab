@@ -3628,7 +3628,7 @@ button[type="submit"]:hover {
     opacity: .7;
     position: fixed;
     bottom: 2%;
-    right: 1%;
+    left: 1%;
     z-index: 11;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
