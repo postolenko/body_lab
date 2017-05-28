@@ -38,6 +38,8 @@ $(document).ready(function() {
 
     // getSwitchLangHright();
 
+    getScrollToTopBtn();
+
 
     $(window).resize(function() {
 
@@ -67,7 +69,12 @@ $(document).ready(function() {
 
     });
 
+    $(document).scroll(function() {
 
+        getScrollToTopBtn();
+
+    });
+    
     $(function() {
 
         $(".wrapper").css({"min-height" : $(window).height() + "px"});
@@ -634,6 +641,24 @@ $(document).ready(function() {
 
     // });
 
+    // ---------------------------------
+
+    $(function() {
+
+        $(".scroll-to-top").click(function () {
+
+            $("body,html").animate({
+
+                scrollTop: 0
+
+            }, 1000);
+
+            return false;
+
+        });
+
+    });
+
     // ------------------------------------------------------------------------------
 
     function getActiveTabBgPosition(indexTabs, indexActiveTab) {
@@ -724,6 +749,22 @@ $(document).ready(function() {
     //     $(".switch-lang-block").css({"height" : switchLangHeight + "px"});
 
     // }
+
+    // -------------------------------
+
+    function getScrollToTopBtn() {
+
+        if ($(window).scrollTop() > $(".header").height() ) {
+
+            $(".scroll-to-top").fadeIn();
+
+        } else {
+
+            $(".scroll-to-top").fadeOut();
+
+        }
+
+    }
 
 
 
