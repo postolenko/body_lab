@@ -96,7 +96,7 @@ $(document).ready(function() {
 
     	$(function() {
 
-			$(".ajax-block").load("team_slider.html", function() {
+			$(".ajax-block").load("team_slider.html script", function() {
 				
 				$(".ajax-block .team-slider").slick({
 				  dots: false,
