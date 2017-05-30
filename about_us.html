@@ -14,14 +14,18 @@
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 	<link rel="stylesheet" type="text/css" href="css/responsive.css">
 	<link rel="stylesheet" type="text/css" href="slick/slick.css">
-	<link rel="stylesheet" type="text/css" href="vendors/css/animate.css">	
+	<link rel="stylesheet" type="text/css" href="vendors/css/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" type="text/css" href="vendors/css/animate.css">
+	<link rel="stylesheet" type="text/css" href="vendors/css/select.css" />
 	<script type="text/javascript" src="vendors/js/jquery.js"></script>
-		<!-- <script type="text/javascript" src="vendors/js/jquery_1.js"></script> -->
-		<!-- <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> -->
-	<!-- <script type="text/javascript" src="vendors/js/modernizr_custom.js"></script> -->
+	<script type="text/javascript" src="vendors/js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<!--[if lt IE 8]>
+		<script type="text/javascript" src="vendors/js/jquery_1.js"></script>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 	<script type="text/javascript" src="slick/slick.js"></script>
-	<script src="vendors/js/smoothscroll.js"></script>
-	<script type="text/javascript" src="vendors/js/wow.min.js"></script>	
+	<script type="text/javascript" src="vendors/js/select.js"></script>
+	<script type="text/javascript" src="vendors/js/wow.min.js"></script>
 	<script>new WOW().init();</script>
 	<link rel="icon" type="image/png" href="favicon/favicon.ico" sizes="16x16">	
 	<title>Body Lab</title>	
@@ -32,25 +36,37 @@
 
 <div class="wrapper">
 
-	<!-- Header -->
-		<div class="header">		
+		<!-- Header -->
+		<div class="header">
 			
 			<div class="row header-row offset-ziro">
 				
 				<div class="logo-block col col-1">
-					<a class="logo-link" href="#">
+					<a class="logo-link wow zoomIn" href="#">
 						<img src="img/logo.png" alt="Body Lab" />
 					</a>
 				</div>
 
-				<div class="col col-2">
-					<div class="main-nav-block">
+				<div class="respmenubtn-box">
+									
+					<button class="respmenubtn">
+						
+						<span></span>
+						<span></span>
+						<span></span>
+
+					</button>
+
+				</div>
+
+				<div class="col col-2 main-nav-sect scroll">
+					<div class="main-nav-block wow fadeInDown">
 						<ul class="main-nav">
 							<li><a href="#">Home</a></li>
 							<li><a href="#">Classes</a></li>
 							<li><a href="#">Timetable</a></li>
 							<li><a href="#">Team</a></li>
-							<li><a href="#">About Us</a></li>
+							<li><a href="#" class="active">About Us</a></li>
 							<li><a href="#">Blog</a></li>
 							<li><a href="#">Contacts</a></li>
 						</ul>
@@ -60,7 +76,7 @@
 				<div class="col col-3">
 
 					<div class="social-block">
-						<ul class="socials">
+						<ul class="socials wow fadeInDown">
 							<li><a href="#"><i class="soc-link soc-link_1"></i></a></li>
 							<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 							<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
@@ -72,46 +88,64 @@
 						</ul>
 					</div>
 
+				</div>
+
+				<div class="col col-4">
 					<div class="switch-lang-block">
 						<ul class="switch-lang">
-							<li><a href="#" class="active">En</a></li>
-							<li><a href="#">Cn</a></li>
+							<li><a href="#" class="active"><span>En</span></a></li>
+							<li><a href="#"><span>Cn</span></a></li>
 						</ul>
 					</div>
-
 				</div>
 
 			</div>
 
 		</div>
-	<!-- /Header -->
+		<!-- /Header -->
 
 		<!-- Content -->
 			<div class="content">
+
+				<button type="button" class="scroll-to-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
 
 				<!-- Main Page Section 1 -->
 
 				<div class="section promo-section">
 					
-					<div class="promo-slider-box">
+					<div class="about-us-slider-box">
 
-						<div class="promo-slider">
-							<div class="slide">
-								<!-- <img src="img/slider/video_bg_1.jpg" alt=""> -->
-								<video autoplay="autoplay" loop="loop" muted="muted" id="theVideo1">										
+						<div class="about-us-slider wow fadeIn">
+							<div class="slide orange-light-bottom">
+								<img src="img/slider/video_bg_1.jpg" alt="">
+								<video autoplay="autoplay" loop="loop" muted="muted" id="theVideo1">
 									<source src="video/videoplayback_1.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
 									<source src="video/videoplayback_1.webm" type='video/webm; codecs="vp8, vorbis"'>
 									<source src="video/videoplayback_1.ogv" type='video/ogg; codecs="theora, vorbis"'>
 									Тег video не поддерживается вашим браузером. 
 									<a href="video/videoplayback_1.mp4">Скачайте видео</a>.
 								</video>
+
+								<div class="center-block offset-ziro">
+									<div class="center-block-content">
+										<button type="button" class="play-btn wow zoomIn">
+											<!-- <img src="img/play_button.svg" alt=""> -->
+											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 109.126 109.126" xml:space="preserve" width="40px" height="40px">
+											<g>
+												<path d="M98.901,47.663L18.197,1.068c-2.467-1.424-5.502-1.424-7.972,0C7.762,2.491,6.243,5.124,6.243,7.971v93.188   c0,2.848,1.522,5.479,3.982,6.9c1.236,0.713,2.61,1.067,3.986,1.067c1.374,0,2.751-0.354,3.983-1.067l80.704-46.594   c2.466-1.422,3.984-4.054,3.984-6.9C102.887,51.719,101.366,49.088,98.901,47.663z" fill="#FFFFFF"/>
+											</g>
+											</svg>
+										</button>
+										<h2 class="wow fadeInDown">Watch video about us</h2>
+										<a href="#" class="more-link wow zoomIn"><span>More info</span></a>
+									</div>
+								</div>
+
 							</div>
 							<div class="slide">
-								<!-- <img src="img/slider/video_bg_2.jpg" alt=""> -->
+								<img src="img/slider/video_bg_2.jpg" alt="">
 								<video autoplay="autoplay" loop="loop" muted="muted" id="theVideo2">					
 									<source src="video/videoplayback_2.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-									<!-- <source src="video/videoplayback_2.webm" type='video/webm; codecs="vp8, vorbis"'>
-									<source src="video/videoplayback_2.ogv" type='video/ogg; codecs="theora, vorbis"'> -->
 									Тег video не поддерживается вашим браузером. 
 									<a href="video/videoplayback_2.mp4">Скачайте видео</a>.
 								</video>
@@ -120,34 +154,14 @@
 
 					</div>
 
-					<div class="center-block offset-ziro">
-						<div class="center-block-content">
-							<button type="button" class="play-btn">
-								<img src="img/play_button.svg" alt="">
-							</button>
-							<h2>Watch video about us</h2>
-						</div>
-					</div>
-<!-- 
-					<div class="slider-nav-block promo_slider_nav">
 
-						<ul class="slider-nav row">
-							<li><a href="#"><span>Fitness program</span></a></li>
-							<li><a href="#"><span>Children's programs</span></a></li>
-							<li><a href="#"><span>Adult Dance program</span></a></li>
-							<li><a href="#"><span>Yoga health & wellness</span></a></li>
-						</ul>
-
-					</div> -->
-
-
-					<div class="popups-section">
+					<div class="popups-section" data-slider-name = "about-us-slider">
 						<div class="popup-bg"></div>
 						<button type="button" class="close-slide-popup">&#10006;</button>
 
 						<div class="popup-block" data-index-actie-slide = "0">
 							<div class="popup">
-								<video loop="loop" muted="muted" id="popup_Video1">									
+								<video loop="loop" muted="muted" id="popup_Video1" controls>									
 									<source src="video/videoplayback_1.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
 									<source src="video/videoplayback_1.webm" type='video/webm; codecs="vp8, vorbis"'>
 									<source src="video/videoplayback_1.ogv" type='video/ogg; codecs="theora, vorbis"'>
@@ -158,7 +172,7 @@
 							</div>
 						</div>
 
-						<div class="popup-block" data-index-actie-slide = "1">
+						<!-- <div class="popup-block" data-index-actie-slide = "1">
 							<div class="popup">
 								<video loop="loop" muted="muted" id="popup_Video2">					
 									<source src="video/videoplayback_2.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
@@ -167,7 +181,7 @@
 
 								</video>
 							</div>
-						</div>
+						</div> -->
 
 					</div>
 
@@ -175,7 +189,6 @@
 				</div>
 
 				<!-- /Main Page Section 1 -->
-
 				<!-- Main Page Section 1 -->
 
 				<div class="section section-shape">
@@ -187,7 +200,7 @@
 							<h3 class="h2-desc">Wellness Center</h3>
 						</div>
 
-						<div class="jumbotron">
+						<div class="jumbotron wow fadeInUp">
 							
 							<p>It has been my dream since I was a little girl and studied in the sport school in my country. I have dreamed about making all people around healthy and beautiful, dreamed about helping people be always happy and positive. Now I can made my dream come true in my Bodylad... In our studio we aim to provide a relaxed environment, mainly for women and kids , to allow your family to improve the fitness skills and health without worries or stress. We offer a range of aerobics solutions to keep fit and we are sure that we have something to suit everyone and all age groups too. We are sure , that bodies are the most powerful machines of all and all of our classes allow you to get your body in the best shape of your li</p>
 
@@ -210,13 +223,13 @@
 		<div class="footer">
 			
 			<div class="row offset-ziro">
-				<div class="col col-1">
+				<div class="col col-1  wow zoomIn">
 					<a class="logo-link" href="#">
 						<img src="img/logo.png" alt="Body Lab">
 					</a>
 				</div>
 
-				<div class="col col-2">
+				<div class="col col-2 wow fadeIn">
 					<h3>Bodylab Wellness Shanghai</h3>
 
 					<p>上海市浦东新区张杨路1550弄3号楼1层,Bodylab舞蹈健身中心（地铁6号线民生路站3号出口） 上海市潍坊西路70号3楼</p>
@@ -228,7 +241,7 @@
 					<p>沪ICP备16010655号-1</p>
 				</div>
 
-				<div class="col col-3">
+				<div class="col col-3 wow fadeInUp">
 					<ul class="socials">
 						<li><a href="#"><i class="soc-link soc-link_1"></i></a></li>
 						<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -272,27 +285,26 @@
 
 			});
 
-			// $(".promo-slider.about_us").slick({
-			// 	arrows: false,
-			// 	dots: false,
-			// 	speed: 700,
-			// 	slidesToShow: 1,
-			// 	fade: true,
-			// 	autoplay: true,
-			// 	autoplaySpeed: 3000
-			// });
+			$(".about-us-slider").slick({
+			  dots: false,
+			  speed: 700,
+			  slidesToShow: 1,
+			  fade: true,
+			  autoplay: true,
+			  autoplaySpeed: 3000
+			});
 
-			// $(".promo-slider.about_us").on('afterChange', function(event, slick, currentSlide){
+			$(".about-us-slider").on('afterChange', function(event, slick, currentSlide){
 
-   //      		$(".promo-slider.about_us .slide video").each(function() {
-   //      			videoId =  window[$(this).attr("id")];
-   //      			videoId.pause();
-   //      		});
+        		$(".about-us-slider .slide video").each(function() {
+        			videoId =  window[$(this).attr("id")];
+        			videoId.pause();
+        		});
 
-   //      		videoId =  window[$(".promo-slider.about_us .slide:eq("+ currentSlide +") video").attr("id")];
-   //      		videoId.play();
+        		videoId =  window[$(".about-us-slider .slide:eq("+ currentSlide +") video").attr("id")];
+        		videoId.play();
 
-			// });
+			});
 
 			$(".teachers-slider").slick({
 			  dots: false,

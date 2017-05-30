@@ -6,7 +6,6 @@
 
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta http-equiv="X-UA-Compatible" content="IE=8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">	
@@ -14,14 +13,18 @@
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 	<link rel="stylesheet" type="text/css" href="css/responsive.css">
 	<link rel="stylesheet" type="text/css" href="slick/slick.css">
-	<link rel="stylesheet" type="text/css" href="vendors/css/animate.css">	
+	<link rel="stylesheet" type="text/css" href="vendors/css/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" type="text/css" href="vendors/css/animate.css">
+	<link rel="stylesheet" type="text/css" href="vendors/css/select.css" />
 	<script type="text/javascript" src="vendors/js/jquery.js"></script>
-		<!-- <script type="text/javascript" src="vendors/js/jquery_1.js"></script> -->
-		<!-- <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> -->
-	<!-- <script type="text/javascript" src="vendors/js/modernizr_custom.js"></script> -->
+	<script type="text/javascript" src="vendors/js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<!--[if lt IE 8]>
+		<script type="text/javascript" src="vendors/js/jquery_1.js"></script>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 	<script type="text/javascript" src="slick/slick.js"></script>
-	<script src="vendors/js/smoothscroll.js"></script>
-	<script type="text/javascript" src="vendors/js/wow.min.js"></script>	
+	<script type="text/javascript" src="vendors/js/select.js"></script>
+	<script type="text/javascript" src="vendors/js/wow.min.js"></script>
 	<script>new WOW().init();</script>
 	<link rel="icon" type="image/png" href="favicon/favicon.ico" sizes="16x16">	
 	<title>Body Lab</title>	
@@ -33,21 +36,33 @@
 <div class="wrapper">
 
 	<!-- Header -->
-		<div class="header">		
+		<div class="header">
 			
 			<div class="row header-row offset-ziro">
 				
 				<div class="logo-block col col-1">
-					<a class="logo-link" href="#">
+					<a class="logo-link wow zoomIn" href="#">
 						<img src="img/logo.png" alt="Body Lab" />
 					</a>
 				</div>
 
-				<div class="col col-2">
-					<div class="main-nav-block">
+				<div class="respmenubtn-box">
+									
+					<button class="respmenubtn">
+						
+						<span></span>
+						<span></span>
+						<span></span>
+
+					</button>
+
+				</div>
+
+				<div class="col col-2 main-nav-sect scroll">
+					<div class="main-nav-block wow fadeInDown">
 						<ul class="main-nav">
 							<li><a href="#">Home</a></li>
-							<li><a href="#">Classes</a></li>
+							<li><a href="#" class="active">Classes</a></li>
 							<li><a href="#">Timetable</a></li>
 							<li><a href="#">Team</a></li>
 							<li><a href="#">About Us</a></li>
@@ -60,7 +75,7 @@
 				<div class="col col-3">
 
 					<div class="social-block">
-						<ul class="socials">
+						<ul class="socials wow fadeInDown">
 							<li><a href="#"><i class="soc-link soc-link_1"></i></a></li>
 							<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 							<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
@@ -72,22 +87,26 @@
 						</ul>
 					</div>
 
+				</div>
+
+				<div class="col col-4">
 					<div class="switch-lang-block">
 						<ul class="switch-lang">
-							<li><a href="#" class="active">En</a></li>
-							<li><a href="#">Cn</a></li>
+							<li><a href="#" class="active"><span>En</span></a></li>
+							<li><a href="#"><span>Cn</span></a></li>
 						</ul>
 					</div>
-
 				</div>
 
 			</div>
 
 		</div>
-	<!-- /Header -->
+		<!-- /Header -->
 
 		<!-- Content -->
 			<div class="content">
+
+				<button type="button" class="scroll-to-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
 
 				<!-- Class Inside Section 1 -->
 
@@ -95,9 +114,9 @@
 
 					<div class="row">
 
-						<h1>Zumba</h1>
+						<h1 class="wow fadeInDown">Zumba</h1>
 						<div class="classes_slider-box">
-							<div class="classes_slider">
+							<div class="classes_slider wow fadeInDown">
 								<div class="slide">
 									<div class="img-box">
 										<img src="img/classes_slider/photo_1.jpg" alt="">
@@ -141,28 +160,28 @@
 				<div class="section section-shape">
 					<div class="row">
 						<div class="teachers-thumbnails">
-							<div class="teacher-thumbnail">
+							<div class="teacher-thumbnail wow zoomIn">
 								<a href="#" class="thumb">
 									<div class="img-box">
-										<img src="img/teachers/photo_01.png" alt="">
+										<img src="img/team_slider/teacher_photo_01.jpg" alt="">
 									</div>
 									<p>Yana</p>
 								</a>
 							</div>
 
-							<div class="teacher-thumbnail">
+							<div class="teacher-thumbnail wow zoomIn">
 								<a href="#" class="thumb">
 									<div class="img-box">
-										<img src="img/teachers/photo_02.png" alt="">
+										<img src="img/team_slider/teacher_photo_02.jpg" alt="">
 									</div>
 									<p>IceX</p>
 								</a>
 							</div>
 
-							<div class="teacher-thumbnail">
+							<div class="teacher-thumbnail wow zoomIn">
 								<a href="#" class="thumb">
 									<div class="img-box">
-										<img src="img/teachers/photo_03.png" alt="">
+										<img src="img/team_slider/teacher_photo_03.jpg" alt="">
 									</div>
 									<p>Yana Lukashkova</p>
 								</a>
@@ -181,13 +200,13 @@
 		<div class="footer">
 			
 			<div class="row offset-ziro">
-				<div class="col col-1">
+				<div class="col col-1  wow zoomIn">
 					<a class="logo-link" href="#">
 						<img src="img/logo.png" alt="Body Lab">
 					</a>
 				</div>
 
-				<div class="col col-2">
+				<div class="col col-2 wow fadeIn">
 					<h3>Bodylab Wellness Shanghai</h3>
 
 					<p>上海市浦东新区张杨路1550弄3号楼1层,Bodylab舞蹈健身中心（地铁6号线民生路站3号出口） 上海市潍坊西路70号3楼</p>
@@ -199,7 +218,7 @@
 					<p>沪ICP备16010655号-1</p>
 				</div>
 
-				<div class="col col-3">
+				<div class="col col-3 wow fadeInUp">
 					<ul class="socials">
 						<li><a href="#"><i class="soc-link soc-link_1"></i></a></li>
 						<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>

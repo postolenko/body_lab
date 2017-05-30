@@ -6,7 +6,6 @@
 
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta http-equiv="X-UA-Compatible" content="IE=8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">	
@@ -14,16 +13,19 @@
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 	<link rel="stylesheet" type="text/css" href="css/responsive.css">
 	<link rel="stylesheet" type="text/css" href="slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="vendors/css/jquery.mCustomScrollbar.css">
 	<link rel="stylesheet" type="text/css" href="vendors/css/animate.css">
-	<!-- <link rel="stylesheet" href="vendors/css/jquery.mCustomScrollbar.css"> -->
-	<script type="text/javascript" src="vendors/js/jquery.js"></script>
-		<!-- <script type="text/javascript" src="vendors/js/jquery_1.js"></script> -->
-		<!-- <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> -->
-	<!-- <script type="text/javascript" src="vendors/js/modernizr_custom.js"></script> -->
+	<link rel="stylesheet" type="text/css" href="vendors/css/select.css" />
+	<!-- <script type="text/javascript" src="vendors/js/jquery.js"></script> -->
+	<script type="text/javascript" src="vendors/js/jquery_1.js"></script>
+	<script type="text/javascript" src="vendors/js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<!--[if lt IE 8]>
+		<script type="text/javascript" src="vendors/js/jquery_1.js"></script>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 	<script type="text/javascript" src="slick/slick.js"></script>
-	<script src="vendors/js/smoothscroll.js"></script>
+	<script type="text/javascript" src="vendors/js/select.js"></script>
 	<script type="text/javascript" src="vendors/js/wow.min.js"></script>
-	<!-- <script src="vendors/js/jquery.mCustomScrollbar.concat.min.js"></script> -->
 	<script>new WOW().init();</script>
 	<link rel="icon" type="image/png" href="favicon/favicon.ico" sizes="16x16">	
 	<title>Body Lab</title>	
@@ -86,13 +88,6 @@
 						</ul>
 					</div>
 
-				<!-- 	<div class="switch-lang-block">
-						<ul class="switch-lang">
-							<li><a href="#" class="active"><span>En</span></a></li>
-							<li><a href="#"><span>Cn</span></a></li>
-						</ul>
-					</div> -->
-
 				</div>
 
 				<div class="col col-4">
@@ -107,7 +102,7 @@
 			</div>
 
 		</div>
-	<!-- /Header -->
+		<!-- /Header -->
 
 		<!-- Content -->
 			<div class="content">
@@ -134,7 +129,6 @@
 								<div class="center-block offset-ziro">
 									<div class="center-block-content">
 										<button type="button" class="play-btn wow zoomIn">
-											<!-- <img src="img/play_button.svg" alt=""> -->
 											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 109.126 109.126" xml:space="preserve" width="40px" height="40px">
 											<g>
 												<path d="M98.901,47.663L18.197,1.068c-2.467-1.424-5.502-1.424-7.972,0C7.762,2.491,6.243,5.124,6.243,7.971v93.188   c0,2.848,1.522,5.479,3.982,6.9c1.236,0.713,2.61,1.067,3.986,1.067c1.374,0,2.751-0.354,3.983-1.067l80.704-46.594   c2.466-1.422,3.984-4.054,3.984-6.9C102.887,51.719,101.366,49.088,98.901,47.663z" fill="#FFFFFF"/>
@@ -158,19 +152,6 @@
 						</div>
 
 					</div>
-
-					
-<!-- 
-					<div class="slider-nav-block promo_slider_nav">
-
-						<ul class="slider-nav row">
-							<li><a href="#"><span>Fitness program</span></a></li>
-							<li><a href="#"><span>Children's programs</span></a></li>
-							<li><a href="#"><span>Adult Dance program</span></a></li>
-							<li><a href="#"><span>Yoga health & wellness</span></a></li>
-						</ul>
-
-					</div> -->
 
 
 					<div class="popups-section">
@@ -216,207 +197,203 @@
 
 							<div class="tabs top-minus">
 
-								<!-- <div class="tabs-wrapp"> -->
+								<div class="tab-nav-block">
 
-									<div class="tab-nav-block">
+									<ul class="tab-nav row">
+										<li><button type="button" class="tab-link" data-tab-link-index="0"><span>Adult Dance program</span></button></li>
+										<li><button type="button" class="tab-link active" data-tab-link-index="1"><span>Children's programs</span></button></li>
+										<li><button type="button" class="tab-link" data-tab-link-index="2"><span>Fitness program</span></button></li>
+										<li><button type="button" class="tab-link" data-tab-link-index="3"><span>Yoga health & wellness</span></button></li>
+									</ul>
 
-										<ul class="tab-nav row">
-											<li><button type="button" class="tab-link" data-tab-link-index="0"><span>Adult Dance program</span></button></li>
-											<li><button type="button" class="tab-link active" data-tab-link-index="1"><span>Children's programs</span></button></li>
-											<li><button type="button" class="tab-link" data-tab-link-index="2"><span>Fitness program</span></button></li>
-											<li><button type="button" class="tab-link" data-tab-link-index="3"><span>Yoga health & wellness</span></button></li>
-										</ul>
+								</div>
 
+								<div class="tabs-content-box wow fadeIn">
+								
+									<div class="tab" data-tab-link="0">
+										<div class="tab-content">
+											<div class="thumbnails classes-thumbnails thumb-380 offset-ziro">
+												
+												<div class="thumbnail">
+													<a href="#" class="inner">
+														<div class="img-box">
+															<img src="img/classes/photo_01.jpg" alt="">
+														</div>
+														<div class="descript">
+															<p class="p-1">Zumba</p>
+															<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
+														</div>
+													</a>
+												</div>
+
+												<div class="thumbnail">
+													<a href="#" class="inner">
+														<div class="img-box">
+															<img src="img/classes/photo_02.jpg" alt="">
+														</div>
+														<div class="descript">
+															<p class="p-1">Stretch fit</p>
+															<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
+														</div>
+													</a>
+												</div>
+
+												<div class="thumbnail">
+													<a href="#" class="inner">
+														<div class="img-box">
+															<img src="img/classes/photo_03.jpg" alt="">
+														</div>
+														<div class="descript">
+															<p class="p-1">Core training</p>
+															<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
+														</div>
+													</a>
+												</div>
+
+												<div class="thumbnail">
+													<a href="#" class="inner">
+														<div class="img-box">
+															<img src="img/classes/photo_04.jpg" alt="">
+														</div>
+														<div class="descript">
+															<p class="p-1">Strong by Zumba</p>
+															<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
+														</div>
+													</a>
+												</div>
+
+												<div class="thumbnail">
+													<a href="#" class="inner">
+														<div class="img-box">
+															<img src="img/classes/photo_05.jpg" alt="">
+														</div>
+														<div class="descript">
+															<p class="p-1">Functional training</p>
+															<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
+														</div>
+													</a>
+												</div>
+
+											</div>
+										</div>
 									</div>
 
-									<div class="tabs-content-box wow fadeIn">
-									
-										<div class="tab" data-tab-link="0">
-											<div class="tab-content">
-												<div class="thumbnails classes-thumbnails thumb-380 offset-ziro">
-													
-													<div class="thumbnail">
-														<a href="#" class="inner">
-															<div class="img-box">
-																<img src="img/classes/photo_01.jpg" alt="">
-															</div>
-															<div class="descript">
-																<p class="p-1">Zumba</p>
-																<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
-															</div>
-														</a>
-													</div>
+									<div class="tab" data-tab-link="1">
+										<div class="tab-content">
+											<div class="thumbnails classes-thumbnails thumb-380 offset-ziro">
+												<div class="thumbnail">
+													<a href="#" class="inner">
+														<div class="img-box">
+															<img src="img/classes/photo_01.jpg" alt="">
+														</div>
+														<div class="descript">
+															<p class="p-1">Zumba</p>
+															<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
+														</div>
+													</a>
+												</div>
 
-													<div class="thumbnail">
-														<a href="#" class="inner">
-															<div class="img-box">
-																<img src="img/classes/photo_02.jpg" alt="">
-															</div>
-															<div class="descript">
-																<p class="p-1">Stretch fit</p>
-																<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
-															</div>
-														</a>
-													</div>
+												<div class="thumbnail">
+													<a href="#" class="inner">
+														<div class="img-box">
+															<img src="img/classes/photo_02.jpg" alt="">
+														</div>
+														<div class="descript">
+															<p class="p-1">Stretch fit</p>
+															<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
+														</div>
+													</a>
+												</div>
 
-													<div class="thumbnail">
-														<a href="#" class="inner">
-															<div class="img-box">
-																<img src="img/classes/photo_03.jpg" alt="">
-															</div>
-															<div class="descript">
-																<p class="p-1">Core training</p>
-																<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
-															</div>
-														</a>
-													</div>
-
-													<div class="thumbnail">
-														<a href="#" class="inner">
-															<div class="img-box">
-																<img src="img/classes/photo_04.jpg" alt="">
-															</div>
-															<div class="descript">
-																<p class="p-1">Strong by Zumba</p>
-																<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
-															</div>
-														</a>
-													</div>
-
-													<div class="thumbnail">
-														<a href="#" class="inner">
-															<div class="img-box">
-																<img src="img/classes/photo_05.jpg" alt="">
-															</div>
-															<div class="descript">
-																<p class="p-1">Functional training</p>
-																<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
-															</div>
-														</a>
-													</div>
-
+												<div class="thumbnail">
+													<a href="#" class="inner">
+														<div class="img-box">
+															<img src="img/classes/photo_03.jpg" alt="">
+														</div>
+														<div class="descript">
+															<p class="p-1">Core training</p>
+															<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
+														</div>
+													</a>
 												</div>
 											</div>
 										</div>
-
-										<div class="tab" data-tab-link="1">
-											<div class="tab-content">
-												<div class="thumbnails classes-thumbnails thumb-380 offset-ziro">
-													<div class="thumbnail">
-														<a href="#" class="inner">
-															<div class="img-box">
-																<img src="img/classes/photo_01.jpg" alt="">
-															</div>
-															<div class="descript">
-																<p class="p-1">Zumba</p>
-																<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
-															</div>
-														</a>
-													</div>
-
-													<div class="thumbnail">
-														<a href="#" class="inner">
-															<div class="img-box">
-																<img src="img/classes/photo_02.jpg" alt="">
-															</div>
-															<div class="descript">
-																<p class="p-1">Stretch fit</p>
-																<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
-															</div>
-														</a>
-													</div>
-
-													<div class="thumbnail">
-														<a href="#" class="inner">
-															<div class="img-box">
-																<img src="img/classes/photo_03.jpg" alt="">
-															</div>
-															<div class="descript">
-																<p class="p-1">Core training</p>
-																<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
-															</div>
-														</a>
-													</div>
-												</div>
-											</div>
-										</div>
-
-										<div class="tab" data-tab-link="2">
-											<div class="tab-content">
-												<div class="thumbnails classes-thumbnails thumb-380 offset-ziro">								
-													<div class="thumbnail">
-														<a href="#" class="inner">
-															<div class="img-box">
-																<img src="img/classes/photo_01.jpg" alt="">
-															</div>
-															<div class="descript">
-																<p class="p-1">Zumba</p>
-																<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
-															</div>
-														</a>
-													</div>
-
-													<div class="thumbnail">
-														<a href="#" class="inner">
-															<div class="img-box">
-																<img src="img/classes/photo_02.jpg" alt="">
-															</div>
-															<div class="descript">
-																<p class="p-1">Stretch fit</p>
-																<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
-															</div>
-														</a>
-													</div>
-
-													<div class="thumbnail">
-														<a href="#" class="inner">
-															<div class="img-box">
-																<img src="img/classes/photo_03.jpg" alt="">
-															</div>
-															<div class="descript">
-																<p class="p-1">Core training</p>
-																<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
-															</div>
-														</a>
-													</div>
-
-												</div>											
-											</div>
-										</div>
-
-										<div class="tab" data-tab-link="3">
-											<div class="tab-content">
-												<div class="thumbnails classes-thumbnails thumb-380 offset-ziro">
-													<div class="thumbnail">
-														<a href="#" class="inner">
-															<div class="img-box">
-																<img src="img/classes/photo_03.jpg" alt="">
-															</div>
-															<div class="descript">
-																<p class="p-1">Core training</p>
-																<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
-															</div>
-														</a>
-													</div>
-
-													<div class="thumbnail">
-														<a href="#" class="inner">
-															<div class="img-box">
-																<img src="img/classes/photo_04.jpg" alt="">
-															</div>
-															<div class="descript">
-																<p class="p-1">Strong by Zumba</p>
-																<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
-															</div>
-														</a>
-													</div>
-												</div>
-											</div>
-										</div>
-
 									</div>
 
-								<!-- </div> -->
+									<div class="tab" data-tab-link="2">
+										<div class="tab-content">
+											<div class="thumbnails classes-thumbnails thumb-380 offset-ziro">								
+												<div class="thumbnail">
+													<a href="#" class="inner">
+														<div class="img-box">
+															<img src="img/classes/photo_01.jpg" alt="">
+														</div>
+														<div class="descript">
+															<p class="p-1">Zumba</p>
+															<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
+														</div>
+													</a>
+												</div>
+
+												<div class="thumbnail">
+													<a href="#" class="inner">
+														<div class="img-box">
+															<img src="img/classes/photo_02.jpg" alt="">
+														</div>
+														<div class="descript">
+															<p class="p-1">Stretch fit</p>
+															<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
+														</div>
+													</a>
+												</div>
+
+												<div class="thumbnail">
+													<a href="#" class="inner">
+														<div class="img-box">
+															<img src="img/classes/photo_03.jpg" alt="">
+														</div>
+														<div class="descript">
+															<p class="p-1">Core training</p>
+															<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
+														</div>
+													</a>
+												</div>
+
+											</div>											
+										</div>
+									</div>
+
+									<div class="tab" data-tab-link="3">
+										<div class="tab-content">
+											<div class="thumbnails classes-thumbnails thumb-380 offset-ziro">
+												<div class="thumbnail">
+													<a href="#" class="inner">
+														<div class="img-box">
+															<img src="img/classes/photo_03.jpg" alt="">
+														</div>
+														<div class="descript">
+															<p class="p-1">Core training</p>
+															<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
+														</div>
+													</a>
+												</div>
+
+												<div class="thumbnail">
+													<a href="#" class="inner">
+														<div class="img-box">
+															<img src="img/classes/photo_04.jpg" alt="">
+														</div>
+														<div class="descript">
+															<p class="p-1">Strong by Zumba</p>
+															<p>This dance class lasts for 60 minutes and is also no previous experience required.</p>
+														</div>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
 
 							</div>
 
@@ -563,7 +540,7 @@
 
 				<!-- Main Page Section 5 -->
 
-				<div class="section-5 section-shape"">
+				<div class="section-5 section-shape">
 					<div class="row">
 						<div class="h-grpup">
 							<h2>Body Lab</h2>
@@ -653,7 +630,7 @@
 							<div class="thumbnail">
 								<div class="inner">
 									<div class="card-img-block">
-										<div class="img-box wow zoomIn">
+										<div class="img-box wow zoomIn" data-card = "card_1">
 											<img class="card" src="img/cards/card_01.jpg" alt="">
 										</div>
 									</div>
@@ -664,7 +641,7 @@
 							<div class="thumbnail">
 								<div class="inner">
 									<div class="card-img-block">
-										<div class="img-box wow zoomIn">
+										<div class="img-box wow zoomIn" data-card = "card_2">
 											<img class="card" src="img/cards/card_02.jpg" alt="">
 										</div>
 									</div>
@@ -675,7 +652,7 @@
 							<div class="thumbnail">
 								<div class="inner">
 									<div class="card-img-block">
-										<div class="img-box wow zoomIn">
+										<div class="img-box wow zoomIn" data-card = "card_3">
 											<img class="card" src="img/cards/card_03.jpg" alt="">
 										</div>
 									</div>
@@ -686,7 +663,7 @@
 							<div class="thumbnail">
 								<div class="inner">
 									<div class="card-img-block">
-										<div class="img-box wow zoomIn">
+										<div class="img-box wow zoomIn" data-card = "card_4">
 											<img class="card" src="img/cards/card_04.jpg" alt="">
 										</div>
 									</div>
@@ -701,131 +678,534 @@
 					<div class="popups-cards-sect">
 						<div class="popup-card-bg"></div>
 
-						<div class="card-popup-box">
+						<div class="cards-slider">
 
-							<div class="card-popup">
-								<div class="inner">
+							<div class="card-popup-box">
 
-									<div class="card-popup-header">
-										<h2>Adult card</h2>
-										<button type="button" class="close-card-popup"></button>
-									</div>
+								<div class="card-popup">
+									<div class="inner">
 
-									<div class="card-content">
-										<div class="card-table">							
-											<div class="card-table-row">
-												<div class="cell">
-													<h3>Cart Type</h3>
+										<div class="card-popup-header">
+											<h2>Family card</h2>
+											<button type="button" class="close-card-popup"></button>
+										</div>
+
+										<div class="card-content">
+											<div class="card-table">							
+												<div class="card-table-row">
+													<div class="cell">
+														<h3>Cart Type</h3>
+													</div>
+													<div class="cell">
+														<h3>Times</h3>
+													</div>
+													<div class="cell">
+														<h3>Prise / Time<br />(RMB)</h3>
+													</div>
+													<div class="cell">
+														<h3>Total Prise<br />(RMB)</h3>
+													</div>
 												</div>
-												<div class="cell">
-													<h3>Times</h3>
+												<div class="card-table-row">
+													<div class="cell">
+														<p>Drop In</p>
+													</div>
+													<div class="cell">
+														<p>1</p>
+													</div>
+													<div class="cell">
+														<p>250</p>
+													</div>
+													<div class="cell">
+														<p>250</p>
+													</div>
 												</div>
-												<div class="cell">
-													<h3>Prise / Time<br />(RMB)</h3>
+												<div class="card-table-row">
+													<div class="cell">
+														<p>2 Month</p>
+													</div>
+													<div class="cell">
+														<p>10</p>
+													</div>
+													<div class="cell">
+														<p>200</p>
+													</div>
+													<div class="cell">
+														<p>2000</p>
+													</div>
 												</div>
-												<div class="cell">
-													<h3>Total Prise<br />(RMB)</h3>
+												<div class="card-table-row">
+													<div class="cell">
+														<p></p>
+													</div>
+													<div class="cell">
+														<p></p>
+													</div>
+													<div class="cell">
+														<p></p>
+													</div>
+													<div class="cell">
+														<p></p>
+													</div>
 												</div>
-											</div>
-											<div class="card-table-row">
-												<div class="cell">
-													<p>Drop In</p>
+												<div class="card-table-row">
+													<div class="cell">
+														<p>4 Month</p>
+													</div>
+													<div class="cell">
+														<p>20</p>
+													</div>
+													<div class="cell">
+														<p>180</p>
+													</div>
+													<div class="cell">
+														<p>3600</p>
+													</div>
 												</div>
-												<div class="cell">
-													<p>1</p>
+												<div class="card-table-row">
+													<div class="cell">
+														<p>6 Month</p>
+													</div>
+													<div class="cell">
+														<p>50</p>
+													</div>
+													<div class="cell">
+														<p>150</p>
+													</div>
+													<div class="cell">
+														<p>7500</p>
+													</div>
 												</div>
-												<div class="cell">
-													<p>250</p>
+												<div class="card-table-row">
+													<div class="cell">
+														<p>10 Month</p>
+													</div>
+													<div class="cell">
+														<p>80</p>
+													</div>
+													<div class="cell">
+														<p>130</p>
+													</div>
+													<div class="cell">
+														<p>10400</p>
+													</div>
 												</div>
-												<div class="cell">
-													<p>250</p>
-												</div>
-											</div>
-											<div class="card-table-row">
-												<div class="cell">
-													<p>2 Month</p>
-												</div>
-												<div class="cell">
-													<p>10</p>
-												</div>
-												<div class="cell">
-													<p>200</p>
-												</div>
-												<div class="cell">
-													<p>2000</p>
-												</div>
-											</div>
-											<div class="card-table-row">
-												<div class="cell">
-													<p></p>
-												</div>
-												<div class="cell">
-													<p></p>
-												</div>
-												<div class="cell">
-													<p></p>
-												</div>
-												<div class="cell">
-													<p></p>
-												</div>
-											</div>
-											<div class="card-table-row">
-												<div class="cell">
-													<p>4 Month</p>
-												</div>
-												<div class="cell">
-													<p>20</p>
-												</div>
-												<div class="cell">
-													<p>180</p>
-												</div>
-												<div class="cell">
-													<p>3600</p>
-												</div>
-											</div>
-											<div class="card-table-row">
-												<div class="cell">
-													<p>6 Month</p>
-												</div>
-												<div class="cell">
-													<p>50</p>
-												</div>
-												<div class="cell">
-													<p>150</p>
-												</div>
-												<div class="cell">
-													<p>7500</p>
-												</div>
-											</div>
-											<div class="card-table-row">
-												<div class="cell">
-													<p>10 Month</p>
-												</div>
-												<div class="cell">
-													<p>80</p>
-												</div>
-												<div class="cell">
-													<p>130</p>
-												</div>
-												<div class="cell">
-													<p>10400</p>
-												</div>
-											</div>
-											<div class="card-table-row">
-												<div class="cell">
-													<p>1 Year</p>
-												</div>
-												<div class="cell">
-													<p>130</p>
-												</div>
-												<div class="cell">
-													<p>100</p>
-												</div>
-												<div class="cell">
-													<p>13000</p>
+												<div class="card-table-row">
+													<div class="cell">
+														<p>1 Year</p>
+													</div>
+													<div class="cell">
+														<p>130</p>
+													</div>
+													<div class="cell">
+														<p>100</p>
+													</div>
+													<div class="cell">
+														<p>13000</p>
+													</div>
 												</div>
 											</div>
 										</div>
+
+									</div>
+
+								</div>
+
+							</div>
+
+							<div class="card-popup-box blue">
+
+								<div class="card-popup">
+									<div class="inner">
+
+										<div class="card-popup-header">
+											<h2>Adult card</h2>
+											<button type="button" class="close-card-popup"></button>
+										</div>
+
+										<div class="card-content">
+											<div class="card-table">							
+												<div class="card-table-row">
+													<div class="cell">
+														<h3>Cart Type</h3>
+													</div>
+													<div class="cell">
+														<h3>Times</h3>
+													</div>
+													<div class="cell">
+														<h3>Prise / Time<br />(RMB)</h3>
+													</div>
+													<div class="cell">
+														<h3>Total Prise<br />(RMB)</h3>
+													</div>
+												</div>
+												<div class="card-table-row">
+													<div class="cell">
+														<p>Drop In</p>
+													</div>
+													<div class="cell">
+														<p>1</p>
+													</div>
+													<div class="cell">
+														<p>250</p>
+													</div>
+													<div class="cell">
+														<p>250</p>
+													</div>
+												</div>
+												<div class="card-table-row">
+													<div class="cell">
+														<p>2 Month</p>
+													</div>
+													<div class="cell">
+														<p>10</p>
+													</div>
+													<div class="cell">
+														<p>200</p>
+													</div>
+													<div class="cell">
+														<p>2000</p>
+													</div>
+												</div>
+												<div class="card-table-row">
+													<div class="cell">
+														<p></p>
+													</div>
+													<div class="cell">
+														<p></p>
+													</div>
+													<div class="cell">
+														<p></p>
+													</div>
+													<div class="cell">
+														<p></p>
+													</div>
+												</div>
+												<div class="card-table-row">
+													<div class="cell">
+														<p>4 Month</p>
+													</div>
+													<div class="cell">
+														<p>20</p>
+													</div>
+													<div class="cell">
+														<p>180</p>
+													</div>
+													<div class="cell">
+														<p>3600</p>
+													</div>
+												</div>
+												<div class="card-table-row">
+													<div class="cell">
+														<p>6 Month</p>
+													</div>
+													<div class="cell">
+														<p>50</p>
+													</div>
+													<div class="cell">
+														<p>150</p>
+													</div>
+													<div class="cell">
+														<p>7500</p>
+													</div>
+												</div>
+												<div class="card-table-row">
+													<div class="cell">
+														<p>10 Month</p>
+													</div>
+													<div class="cell">
+														<p>80</p>
+													</div>
+													<div class="cell">
+														<p>130</p>
+													</div>
+													<div class="cell">
+														<p>10400</p>
+													</div>
+												</div>
+												<div class="card-table-row">
+													<div class="cell">
+														<p>1 Year</p>
+													</div>
+													<div class="cell">
+														<p>130</p>
+													</div>
+													<div class="cell">
+														<p>100</p>
+													</div>
+													<div class="cell">
+														<p>13000</p>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+
+								</div>
+
+							</div>
+
+							<div class="card-popup-box">
+
+								<div class="card-popup">
+									<div class="inner">
+
+										<div class="card-popup-header">
+											<h2>Children's card</h2>
+											<button type="button" class="close-card-popup"></button>
+										</div>
+
+										<div class="card-content">
+											<div class="card-table">							
+												<div class="card-table-row">
+													<div class="cell">
+														<h3>Cart Type</h3>
+													</div>
+													<div class="cell">
+														<h3>Times</h3>
+													</div>
+													<div class="cell">
+														<h3>Prise / Time<br />(RMB)</h3>
+													</div>
+													<div class="cell">
+														<h3>Total Prise<br />(RMB)</h3>
+													</div>
+												</div>
+												<div class="card-table-row">
+													<div class="cell">
+														<p>Drop In</p>
+													</div>
+													<div class="cell">
+														<p>1</p>
+													</div>
+													<div class="cell">
+														<p>250</p>
+													</div>
+													<div class="cell">
+														<p>250</p>
+													</div>
+												</div>
+												<div class="card-table-row">
+													<div class="cell">
+														<p>2 Month</p>
+													</div>
+													<div class="cell">
+														<p>10</p>
+													</div>
+													<div class="cell">
+														<p>200</p>
+													</div>
+													<div class="cell">
+														<p>2000</p>
+													</div>
+												</div>
+												<div class="card-table-row">
+													<div class="cell">
+														<p></p>
+													</div>
+													<div class="cell">
+														<p></p>
+													</div>
+													<div class="cell">
+														<p></p>
+													</div>
+													<div class="cell">
+														<p></p>
+													</div>
+												</div>
+												<div class="card-table-row">
+													<div class="cell">
+														<p>4 Month</p>
+													</div>
+													<div class="cell">
+														<p>20</p>
+													</div>
+													<div class="cell">
+														<p>180</p>
+													</div>
+													<div class="cell">
+														<p>3600</p>
+													</div>
+												</div>
+												<div class="card-table-row">
+													<div class="cell">
+														<p>6 Month</p>
+													</div>
+													<div class="cell">
+														<p>50</p>
+													</div>
+													<div class="cell">
+														<p>150</p>
+													</div>
+													<div class="cell">
+														<p>7500</p>
+													</div>
+												</div>
+												<div class="card-table-row">
+													<div class="cell">
+														<p>10 Month</p>
+													</div>
+													<div class="cell">
+														<p>80</p>
+													</div>
+													<div class="cell">
+														<p>130</p>
+													</div>
+													<div class="cell">
+														<p>10400</p>
+													</div>
+												</div>
+												<div class="card-table-row">
+													<div class="cell">
+														<p>1 Year</p>
+													</div>
+													<div class="cell">
+														<p>130</p>
+													</div>
+													<div class="cell">
+														<p>100</p>
+													</div>
+													<div class="cell">
+														<p>13000</p>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+
+								</div>
+
+							</div>
+
+							<div class="card-popup-box blue">
+
+								<div class="card-popup">
+									<div class="inner">
+
+										<div class="card-popup-header">
+											<h2>vip card</h2>
+											<button type="button" class="close-card-popup"></button>
+										</div>
+
+										<div class="card-content">
+											<div class="card-table">							
+												<div class="card-table-row">
+													<div class="cell">
+														<h3>Cart Type</h3>
+													</div>
+													<div class="cell">
+														<h3>Times</h3>
+													</div>
+													<div class="cell">
+														<h3>Prise / Time<br />(RMB)</h3>
+													</div>
+													<div class="cell">
+														<h3>Total Prise<br />(RMB)</h3>
+													</div>
+												</div>
+												<div class="card-table-row">
+													<div class="cell">
+														<p>Drop In</p>
+													</div>
+													<div class="cell">
+														<p>1</p>
+													</div>
+													<div class="cell">
+														<p>250</p>
+													</div>
+													<div class="cell">
+														<p>250</p>
+													</div>
+												</div>
+												<div class="card-table-row">
+													<div class="cell">
+														<p>2 Month</p>
+													</div>
+													<div class="cell">
+														<p>10</p>
+													</div>
+													<div class="cell">
+														<p>200</p>
+													</div>
+													<div class="cell">
+														<p>2000</p>
+													</div>
+												</div>
+												<div class="card-table-row">
+													<div class="cell">
+														<p></p>
+													</div>
+													<div class="cell">
+														<p></p>
+													</div>
+													<div class="cell">
+														<p></p>
+													</div>
+													<div class="cell">
+														<p></p>
+													</div>
+												</div>
+												<div class="card-table-row">
+													<div class="cell">
+														<p>4 Month</p>
+													</div>
+													<div class="cell">
+														<p>20</p>
+													</div>
+													<div class="cell">
+														<p>180</p>
+													</div>
+													<div class="cell">
+														<p>3600</p>
+													</div>
+												</div>
+												<div class="card-table-row">
+													<div class="cell">
+														<p>6 Month</p>
+													</div>
+													<div class="cell">
+														<p>50</p>
+													</div>
+													<div class="cell">
+														<p>150</p>
+													</div>
+													<div class="cell">
+														<p>7500</p>
+													</div>
+												</div>
+												<div class="card-table-row">
+													<div class="cell">
+														<p>10 Month</p>
+													</div>
+													<div class="cell">
+														<p>80</p>
+													</div>
+													<div class="cell">
+														<p>130</p>
+													</div>
+													<div class="cell">
+														<p>10400</p>
+													</div>
+												</div>
+												<div class="card-table-row">
+													<div class="cell">
+														<p>1 Year</p>
+													</div>
+													<div class="cell">
+														<p>130</p>
+													</div>
+													<div class="cell">
+														<p>100</p>
+													</div>
+													<div class="cell">
+														<p>13000</p>
+													</div>
+												</div>
+											</div>
+										</div>
+
 									</div>
 
 								</div>
@@ -888,17 +1268,6 @@
 		<script src="js/scripts.js"></script>
 
 		<script type="text/javascript">
-
-
-			// (function($){
-
-			// 	$(window).on("load",function(){
-
-			// 		$(".scroll").mCustomScrollbar();
-
-			// 	});
-
-			// })(jQuery);
 
 			$(".promo-slider").slick({
 			  dots: false,

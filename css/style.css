@@ -214,7 +214,8 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity .3s e
 
 .section {
     position: relative;
-    padding: 30px 0;
+    /*padding: 30px 0;*/
+    padding: 70px 0 40px 0;
 }
 
 h1 {
@@ -928,18 +929,6 @@ ul.main-nav li a:hover span.tr {
     position: relative;
 }
 
-/*.promo-slider-box .slick-dots {
-    display: block;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    opacity: .1;
-    z-index: -1;
-    position: absolute;
-    bottom: 60px;
-    left: 0;
-}*/
-
 .promo-slider {
     overflow: hidden;
 }
@@ -1293,11 +1282,16 @@ ul.main-nav li a:hover span.tr {
 
 .classes-thumbnails {
     text-align: center;
-    padding-bottom: 70px;
-}
-
-.classes-thumbnails:nth-child(1) {
+    padding-top: 5px;
     padding-bottom: 0;
+}
+/*
+.section:nth-child(1) {
+    padding-top: 43px;
+}*/
+
+.section:last-child .classes-thumbnails {
+    padding-bottom: 70px;
 }
 
 .classes-thumbnails.margin-minus {
@@ -1955,6 +1949,7 @@ ul.main-nav li a:hover span.tr {
     box-shadow: 0px 0px 33px 0px rgba(0, 0, 0, .5);
 }
 
+
 .cards-thumbnails .p-1 {
     font-family: "Open Sans", Arial, Verdana, sans-serif;
     font-size: 20px;
@@ -1976,9 +1971,13 @@ ul.main-nav li a:hover span.tr {
     z-index: 10;
 }
 
+.cards-slider {
+
+}
+
 .popup-card-bg {
-    /*display: block;*/
-    display: none;
+    display: block;
+    /*display: none;*/
     position: absolute;
     top: 0;
     left: 0;
@@ -1997,6 +1996,7 @@ ul.main-nav li a:hover span.tr {
 }
 
 .card-popup {
+    /*display: block;*/
     display: inline-table;
     vertical-align: middle;
     width: 98%;
@@ -2018,7 +2018,7 @@ ul.main-nav li a:hover span.tr {
 }
 
 .card-popup-header {
-    opacity: 0;
+    /*opacity: 0;*/
     text-align: left;
     position: relative;
     padding: 10px 26px 15px 0;
@@ -2086,6 +2086,15 @@ ul.main-nav li a:hover span.tr {
     color: #f8430a;
 }
 
+.blue .close-card-popup.active {
+    color: #4495f1;
+}
+
+.blue .close-card-popup:hover,
+.blue .close-card-popup:active {
+    color: #4495f1;
+}
+
 .close-card-popup:after {
     display: block;
     content: "\2716";
@@ -2093,13 +2102,14 @@ ul.main-nav li a:hover span.tr {
     top: -2px;
 }
 
+
 .card-content {
     padding: 27px 3%;
-    -webkit-transform: rotateY(90deg);
+/*    -webkit-transform: rotateY(90deg);
     -moz-transform: rotateY(90deg);
     -ms-transform: rotateY(90deg);
     -o-transform: rotateY(90deg);
-    transform: rotateY(90deg);
+    transform: rotateY(90deg);*/
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
@@ -2110,6 +2120,14 @@ ul.main-nav li a:hover span.tr {
     background: -webkit-linear-gradient(left, rgba(238,35,23,1) 0%,rgba(252,77,6,1) 100%);
     background: linear-gradient(to right, rgba(238,35,23,1) 0%,rgba(252,77,6,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ee2317', endColorstr='#fc4d06',GradientType=1 );
+}
+
+.blue .card-content {
+    background: rgb(0,120,254);
+    background: -moz-linear-gradient(left, rgba(0,120,254,1) 0%, rgba(0,207,253,1) 100%);
+    background: -webkit-linear-gradient(left, rgba(0,120,254,1) 0%,rgba(0,207,253,1) 100%);
+    background: linear-gradient(to right, rgba(0,120,254,1) 0%,rgba(0,207,253,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0078fe', endColorstr='#00cffd',GradientType=1 );
 }
 
 .card-table {
@@ -2154,10 +2172,24 @@ ul.main-nav li a:hover span.tr {
     background-image: url(../img/room_1_sect_bg.jpg);
     background-size: cover;
     background-position: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.rom_1_sect .row {
+    position: relative;
+    z-index: 3;
+}
+
+.rom_1_sect.orange-light-bottom:after {
+    bottom: -59px;
 }
 
 .selects-block {
     text-align: center;
+    position: relative;
+    z-index: 2;
+    padding: 25px 0 5px 0;
 }
 
 .select-box {
@@ -2165,6 +2197,12 @@ ul.main-nav li a:hover span.tr {
     vertical-align: top;
     /*width: 262px;*/
     margin: 5px 15px;
+    position: relative;
+}
+
+.select-box.active {
+    position: relative;
+    z-index: 2;
 }
 
 select {
@@ -2177,7 +2215,13 @@ select {
 .table {
     display: table;
     width: 100%;
+    min-width: 750px;
     border-collapse: collapse;
+    margin: 10px 0 39px 0;
+}
+
+.scroll-horizontal {
+    width: 100%;
 }
 
 .table-row {
@@ -2216,6 +2260,10 @@ select {
     left: -2px;
     border-top: 2px solid #f73e0c;
     border-left: 2px solid #ee2317;
+}
+
+.table-row .cell.noborder {
+    border: none;
 }
 
 .table-header .cell {
@@ -2558,13 +2606,13 @@ select {
 .link-back {
     display: inline-block;
     vertical-align: top;
-    min-width: 152px;
+    min-width: 192px;
     cursor: pointer;
     position: relative;
     text-align: center;
     text-transform: uppercase;
     margin: 15px 0;
-    padding: 12px 1%;
+    padding: 12px 1% 12px 2%;
     background: transparent;
     border: 1px solid #65686a;
     -webkit-border-radius: 25px;
@@ -2673,6 +2721,19 @@ select {
     opacity: 1;
 }
 
+.link-back:after {
+    display: inline-block;
+    vertical-align: middle;
+    font-family: 'FontAwesome';
+    content: "\f104";
+    font-size: 25px;
+    line-height: 25px;
+    color: #ffffff;
+    position: absolute;
+    top: 11px;
+    left: 15px;
+}
+
 .load-more {
     display: inline-block;
     vertical-align: top;
@@ -2699,6 +2760,19 @@ select {
     background: linear-gradient(to right, rgba(238,35,23,1) 0%,rgba(252,77,6,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ee2317', endColorstr='#fc4d06',GradientType=1 );
 
+}
+
+.load-more .refresh-icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 18px;
+    height: 24px;
+    margin: 0 4% 0 0;
+    position: relative;
+    top: -1px;
+    background-image: url(../img/refresh_icon.png);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 
@@ -2818,11 +2892,19 @@ select {
 }
 
 .classes_slider-box {
-    margin: 108px 0 0 0;
+    margin: 108px 0 10px 0;
 }
 
 .classes_slider {
     overflow: hidden;
+}
+
+.classes_slider .slide-descript:before {
+    display: none;
+}
+
+.classes_slider .slick-dots {
+    padding: 25px 0 0 0;
 }
 
 .classes_slider .slick-arrow {
@@ -2881,8 +2963,71 @@ select {
     padding: 490px 0 20px 0;
 }
 
+.class-promo + .section .teachers-thumbnails {
+    padding-top: 5px;
+}
+
  
 /*-- /Class Inside Section 1 --*/
+
+/*-- About Us --*/
+
+.about-us-slider-box {
+    position: relative;
+    height: 730px;
+    overflow: hidden;
+    position: relative;
+}
+
+.about-us-slider {
+    overflow: hidden;
+}
+
+.about-us-slider .slide {
+    height: 730px;
+    position: relative;
+    z-index: 2;
+}
+
+.about-us-slider .slide:before {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: rgba(0, 0 ,0, .5);
+}
+
+.about-us-slider .slide img {
+    display: block;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.about-us-slider .slide video {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 2;
+}
+
+.about-us-slider .slide .center-block {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+/*-- /About Us --*/
 
 /*-- Teachers Section 1 --*/
 
@@ -3159,6 +3304,7 @@ select {
     vertical-align: top;
     width: 168px;
     padding: 16px 0;
+    outline: none;
 }
 
 .teachers-miniature-slider .slide .thumb {
@@ -3191,7 +3337,7 @@ select {
 }
 
 .teachers-miniature-slider .slide .thumb:active,
-.teachers-miniature-slider .slide .thumb.active {
+.teachers-miniature-slider .slide.active .thumb {
     opacity: 1;
 }
 
@@ -3201,6 +3347,31 @@ select {
 
 .teachers-miniature-slider .slide .thumb:hover {
     opacity: 1;
+}
+
+.teachers-miniature-slider .slide.slick-current .thumb {
+    opacity: 1;
+}
+
+.teachers-miniature-slider .slide.slick-current .thumb .img-box {
+    border: 3px solid #f8430a;
+    -webkit-transform: scale(1.04);
+    -moz-transform: scale(1.04);
+    -ms-transform: scale(1.04);
+    -o-transform: scale(1.04);
+    transform: scale(1.04);
+}
+
+.teachers-miniature-slider .slide.slick-current .thumb .img-box img {
+    -webkit-transform: scale(1.04);
+    -moz-transform: scale(1.04);
+    -ms-transform: scale(1.04);
+    -o-transform: scale(1.04);
+    transform: scale(1.04);
+}
+
+.teachers-miniature-slider .slide.slick-current .thumb p {
+    color: #f8430a;
 }
 
 
@@ -3243,11 +3414,23 @@ select {
 .map-section .row {
     position: relative;
     z-index: 2;
+    height: 1px;
+}
+
+.contacts-content {
+    display: inline-block;
+    vertical-align: top;
+    width: 48%;
+    max-width: 565px;
+    position: relative;
+    z-index: 3;
 }
 
 .contacts-box {
     display: block;
-    width: 48%;
+    /*width: 48%;
+    max-width: 565px;*/
+    width: 100%;
     margin: 40px 0;
     padding: 5px 3%;
     background: rgba(35, 39, 41, 1);

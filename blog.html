@@ -14,14 +14,18 @@
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 	<link rel="stylesheet" type="text/css" href="css/responsive.css">
 	<link rel="stylesheet" type="text/css" href="slick/slick.css">
-	<link rel="stylesheet" type="text/css" href="vendors/css/animate.css">	
+	<link rel="stylesheet" type="text/css" href="vendors/css/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" type="text/css" href="vendors/css/animate.css">
+	<link rel="stylesheet" type="text/css" href="vendors/css/select.css" />
 	<script type="text/javascript" src="vendors/js/jquery.js"></script>
-		<!-- <script type="text/javascript" src="vendors/js/jquery_1.js"></script> -->
-		<!-- <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> -->
-	<!-- <script type="text/javascript" src="vendors/js/modernizr_custom.js"></script> -->
+	<script type="text/javascript" src="vendors/js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<!--[if lt IE 8]>
+		<script type="text/javascript" src="vendors/js/jquery_1.js"></script>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 	<script type="text/javascript" src="slick/slick.js"></script>
-	<script src="vendors/js/smoothscroll.js"></script>
-	<script type="text/javascript" src="vendors/js/wow.min.js"></script>	
+	<script type="text/javascript" src="vendors/js/select.js"></script>
+	<script type="text/javascript" src="vendors/js/wow.min.js"></script>
 	<script>new WOW().init();</script>
 	<link rel="icon" type="image/png" href="favicon/favicon.ico" sizes="16x16">	
 	<title>Body Lab</title>	
@@ -33,25 +37,37 @@
 <div class="wrapper">
 
 	<!-- Header -->
-		<div class="header">		
+		<div class="header">
 			
 			<div class="row header-row offset-ziro">
 				
 				<div class="logo-block col col-1">
-					<a class="logo-link" href="#">
+					<a class="logo-link wow zoomIn" href="#">
 						<img src="img/logo.png" alt="Body Lab" />
 					</a>
 				</div>
 
-				<div class="col col-2">
-					<div class="main-nav-block">
+				<div class="respmenubtn-box">
+									
+					<button class="respmenubtn">
+						
+						<span></span>
+						<span></span>
+						<span></span>
+
+					</button>
+
+				</div>
+
+				<div class="col col-2 main-nav-sect scroll">
+					<div class="main-nav-block wow fadeInDown">
 						<ul class="main-nav">
 							<li><a href="#">Home</a></li>
 							<li><a href="#">Classes</a></li>
 							<li><a href="#">Timetable</a></li>
 							<li><a href="#">Team</a></li>
 							<li><a href="#">About Us</a></li>
-							<li><a href="#">Blog</a></li>
+							<li><a href="#" class="active">Blog</a></li>
 							<li><a href="#">Contacts</a></li>
 						</ul>
 					</div>
@@ -60,7 +76,7 @@
 				<div class="col col-3">
 
 					<div class="social-block">
-						<ul class="socials">
+						<ul class="socials wow fadeInDown">
 							<li><a href="#"><i class="soc-link soc-link_1"></i></a></li>
 							<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 							<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
@@ -72,22 +88,26 @@
 						</ul>
 					</div>
 
+				</div>
+
+				<div class="col col-4">
 					<div class="switch-lang-block">
 						<ul class="switch-lang">
-							<li><a href="#" class="active">En</a></li>
-							<li><a href="#">Cn</a></li>
+							<li><a href="#" class="active"><span>En</span></a></li>
+							<li><a href="#"><span>Cn</span></a></li>
 						</ul>
 					</div>
-
 				</div>
 
 			</div>
 
 		</div>
-	<!-- /Header -->
+		<!-- /Header -->
 
 		<!-- Content -->
 			<div class="content">
+
+				<button type="button" class="scroll-to-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
 
 				<!-- Blog Section 1 -->
 
@@ -102,10 +122,10 @@
 
 						<div class="articles-block">
 							
-							<div class="article">
+							<div class="article wow fadeInUp">
 								
 								<div class="img-box">
-									<img src="img/blog/blog_photo_01.jpg">
+									<img src="img/blog/blog_photo_01.jpg" alt="">
 								</div>
 
 								<div class="col-right">
@@ -117,10 +137,10 @@
 
 							</div>
 
-							<div class="article">
+							<div class="article wow fadeInUp">
 								
 								<div class="img-box">
-									<img src="img/blog/blog_photo_02.jpg">
+									<img src="img/blog/blog_photo_02.jpg" alt="">
 								</div>
 
 								<div class="col-right">
@@ -134,7 +154,7 @@
 
 							<div class="align-center">
 
-								<a class="load-more" href="#"><i></i>Loade more</a>
+								<a class="load-more" href="#"><i class="refresh-icon" aria-hidden="true"></i>Loade more</a>
 
 							</div>
 
@@ -155,13 +175,13 @@
 		<div class="footer">
 			
 			<div class="row offset-ziro">
-				<div class="col col-1">
+				<div class="col col-1  wow zoomIn">
 					<a class="logo-link" href="#">
 						<img src="img/logo.png" alt="Body Lab">
 					</a>
 				</div>
 
-				<div class="col col-2">
+				<div class="col col-2 wow fadeIn">
 					<h3>Bodylab Wellness Shanghai</h3>
 
 					<p>上海市浦东新区张杨路1550弄3号楼1层,Bodylab舞蹈健身中心（地铁6号线民生路站3号出口） 上海市潍坊西路70号3楼</p>
@@ -173,7 +193,7 @@
 					<p>沪ICP备16010655号-1</p>
 				</div>
 
-				<div class="col col-3">
+				<div class="col col-3 wow fadeInUp">
 					<ul class="socials">
 						<li><a href="#"><i class="soc-link soc-link_1"></i></a></li>
 						<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>

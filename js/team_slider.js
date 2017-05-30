@@ -14,39 +14,234 @@ $(document).ready(function() {
 
     	bodyWidth = w.innerWidth || e.clientWidth || g.clientWidth;
 
-    	console.log(bodyWidth);
+		// if( bodyWidth < 768 ) {
+
+		// 	// slick_slider();
+
+		// 	if( initialized == false ) {
+
+		// 		$(".team-slider").slick({
+		// 		  dots: false,
+		// 		  arrows: false,
+		// 		  speed: 700,
+		// 		  fade: true,
+		// 		  slidesToShow: 1,
+		// 		  slidesToScroll: 1,
+		// 		  autoplay: true,
+		// 		  autoplaySpeed: 16000,
+		// 		  asNavFor: $(".teachers-miniature-slider")
+		// 		});
+
+		// 		$(".teachers-miniature-slider").slick({
+		// 			arrows: true,
+		// 			centerMode: true,
+		// 	   		slidesToShow: 3,
+		// 			slidesToScroll: 2,
+		// 			centerMode: true,
+		// 			dots: false,
+		// 			asNavFor: $(".team-slider"),
+		// 			responsive: [
+		// 				{
+		// 				breakpoint: 768,
+		// 				settings: {
+		// 				   		slidesToShow: 3,
+		// 						slidesToScroll: 2
+		// 					}
+		// 				},
+		// 				{
+		// 				breakpoint: 600,
+		// 				settings: {
+		// 				   		slidesToShow: 1,
+		// 						slidesToScroll: 1
+		// 					}
+		// 				}
+		// 			]
+		// 		});
+
+		// 		initialized = true;
+
+		// 	}
+
+		// } else {
+
+		// 	// setTimeout(function() {
+
+		// 		if( initialized == true) {
+
+		// 			$(".team-slider").slick("unslick");
+					
+		// 			$(".team-slider .slide").removeAttr("tabindex");
+		// 			$(".team-slider .slide").removeAttr("role");
+		// 			$(".team-slider .slide").removeAttr("aria-describedby");
+
+		// 			initialTeamSlider();
+
+		// 			// $(".teachers-miniature-slider").slick({
+		// 			// 	responsive: false
+		// 			// });
+
+		// 			$(".teachers-miniature-slider").slick("unslick");
+
+		// 			initialized = false;
+
+		// 		}
+
+		// 	// }, 1000);
+
+		// }
 
     });
 
-	if( $(".teachers-miniature-slider").length && bodyWidth > 768) {
+    if( bodyWidth < 768 ) {
 
-		$(".team-slider .slide").css({"display" : "none"});
+    	$(function() {
 
-		$(".teachers-miniature-slider .slide .thumb").each(function() {
-
-			if($(this).hasClass("active")) {
-
-				idexSlide = $(".teachers-miniature-slider .slide .thumb.active").index();
-
-				$(this).addClass("active");
-
-				$(".team-slider .slide").each(function() {
-
-					if($(this).is(":visible")) {
-
-						$(this).fadeOut(300);
-
-					}
-
+			$(".ajax-block").load("team_slider.html", function() {
+				
+				$(".ajax-block .team-slider").slick({
+				  dots: false,
+				  arrows: false,
+				  speed: 700,
+				  fade: true,
+				  slidesToShow: 1,
+				  slidesToScroll: 1,
+				  autoplay: true,
+				  autoplaySpeed: 16000,
+				  asNavFor: $(".teachers-miniature-slider")
 				});
 
-			}
+				$(".ajax-block .teachers-miniature-slider").slick({
+					arrows: true,
+					centerMode: true,
+			   		slidesToShow: 3,
+					slidesToScroll: 2,
+					centerMode: true,
+					dots: false,
+					asNavFor: $(".team-slider"),
+					responsive: [
+						{
+						breakpoint: 768,
+						settings: {
+						   		slidesToShow: 3,
+								slidesToScroll: 2
+							}
+						},
+						{
+						breakpoint: 600,
+						settings: {
+						   		slidesToShow: 1,
+								slidesToScroll: 1
+							}
+						}
+					]
+				});
+
+			});
 
 		});
 
-		$(".team-slider .slide:eq("+ idexSlide +")").delay(400).fadeIn(300);
+    } else {
 
-		$(".teachers-miniature-slider .slide .thumb").click(function(slideClick) {
+    	$(".ajax-block").html("");
+
+    }
+
+ //    if( bodyWidth < 768 ) {
+
+	// 	// slick_slider();
+
+	// 	if( initialized == false ) {
+
+	// 		$(".team-slider").slick({
+	// 		  dots: false,
+	// 		  arrows: false,
+	// 		  speed: 700,
+	// 		  fade: true,
+	// 		  slidesToShow: 1,
+	// 		  slidesToScroll: 1,
+	// 		  autoplay: true,
+	// 		  autoplaySpeed: 16000,
+	// 		  asNavFor: $(".teachers-miniature-slider")
+	// 		});
+
+	// 		$(".teachers-miniature-slider").slick({
+	// 			arrows: true,
+	// 			centerMode: true,
+	// 	   		slidesToShow: 3,
+	// 			slidesToScroll: 2,
+	// 			centerMode: true,
+	// 			dots: false,
+	// 			asNavFor: $(".team-slider"),
+	// 			responsive: [
+	// 				{
+	// 				breakpoint: 768,
+	// 				settings: {
+	// 				   		slidesToShow: 3,
+	// 						slidesToScroll: 2
+	// 					}
+	// 				},
+	// 				{
+	// 				breakpoint: 600,
+	// 				settings: {
+	// 				   		slidesToShow: 1,
+	// 						slidesToScroll: 1
+	// 					}
+	// 				}
+	// 			]
+	// 		});
+
+	// 		initialized = true;
+
+	// 	}
+
+	// } else {
+
+	// 	if( $(".teachers-miniature-slider.slick-initialized").length > 0 ) {
+
+	// 		$(".team-slider").slick("unslick");
+	// 		$(".teachers-miniature-slider").slick("unslick");
+
+	// 		initialized = false;
+
+	// 	}
+
+		initialTeamSlider();
+
+	// }
+
+    
+
+
+
+	if( !$(".teachers-miniature-slider.slick-initialized").length && bodyWidth > 768) {
+
+		// $(".team-slider .slide").css({"display" : "none"});
+
+		// $(".teachers-miniature-slider .slide").each(function() {
+
+		// 	if($(this).hasClass("active")) {
+
+		// 		idexSlide = $(".teachers-miniature-slider .slide.active").index();
+
+		// 		$(this).addClass("active");
+
+		// 		$(".team-slider .slide").each(function() {
+
+		// 			if($(this).is(":visible")) {
+
+		// 				$(this).fadeOut(300);
+
+		// 			}
+
+		// 		});
+
+		// 	}
+
+		// });
+
+		// $(".team-slider .slide:eq("+ idexSlide +")").delay(400).fadeIn(300);
+
+		$(".teachers-miniature-slider .slide").click(function(slideClick) {
 
 			slideClick.preventDefault();
 
@@ -60,9 +255,9 @@ $(document).ready(function() {
 
 			});
 
-			idexSlide = $(".teachers-miniature-slider .slide .thumb").index(this);
+			idexSlide = $(".teachers-miniature-slider .slide").index(this);
 
-			$(".teachers-miniature-slider .slide .thumb").each(function() {
+			$(".teachers-miniature-slider .slide").each(function() {
 
 				if($(this).hasClass("active")) {
 
@@ -94,7 +289,7 @@ $(document).ready(function() {
 
 			setTimeout(function() {
 
-					$(".team-slider").css({"height" : "auto" });
+				$(".team-slider").css({"height" : "auto" });
 
 			}, 600);
 
@@ -103,83 +298,127 @@ $(document).ready(function() {
 	}
 
 
-		// var wrapper;
-		// var initialized = false;
+	// var wrapper;
+	// var initialized = false;
 
-	slick_slider();
-	$(window).resize(slick_slider);		
+	// slick_slider();
+	// $(window).resize(slick_slider);
 
-	function slick_slider() {
+	function initialTeamSlider() {
 
-		wrapper = $(".teachers-miniature-slider");
+    	$(".teachers-miniature-slider .slide").each(function() {
 
-		if ($(".teachers-miniature-slider.slick-initialized").length > 0
-			&& $(".team-slider.slick-initialized").length > 0
-			&& bodyWidth > 768 ) {
+    		$(".team-slider .slide").css({"display" : "none"});
 
-			setTimeout(function() {
+			if($(this).hasClass("active")) {
 
-				wrapper.slick("unslick");
+				idexSlide = $(".teachers-miniature-slider .slide.active").index();
 
-				$(".team-slider").slick("unslick");
+				$(this).addClass("active");
+
+				$(".team-slider .slide").each(function() {
+
+					if($(this).is(":visible")) {
+
+						$(this).fadeOut(300);
+
+					}
+
+				});
 
 				$(".team-slider .slide:eq("+ idexSlide +")").delay(400).fadeIn(300);
 
-			}, 400);
-
-			initialized = false;
-
-		} else if( bodyWidth <= 768) {
-
-			if( initialized == false ) {
-
-				$(".team-slider").slick({
-				  dots: false,
-				  arrows: false,
-				  speed: 700,
-				  slidesToShow: 1,
-				  slidesToScroll: 1,
-				  autoplay: true,
-				  autoplaySpeed: 16000,
-				  asNavFor: $(".teachers-miniature-slider")
-				});
-
-				wrapper.slick({
-					arrows: true,
-			   		slidesToShow: 3,
-					slidesToScroll: 1,
-					dots: false,
-					asNavFor: $(".team-slider"),
-					responsive: [
-						{
-						breakpoint: 768,
-						settings: {
-						   		slidesToShow: 3,
-								slidesToScroll: 1
-							}
-						},
-						{
-						breakpoint: 480,
-						settings: {
-						   		slidesToShow: 2,
-								slidesToScroll: 1
-							}
-						},
-						{
-						breakpoint: 350,
-						settings: {
-						   		slidesToShow: 1,
-								slidesToScroll: 1
-							}
-						}
-					]
-				});
-
 			}
 
-			initialized = true;
+		});
 
-		}
+    }
+
+	function slick_slider() {
+
+		// wrapper = $(".teachers-miniature-slider");
+
+		// if ($(".teachers-miniature-slider.slick-initialized").length > 0
+		// 	&& $(".team-slider.slick-initialized").length > 0
+		// 	&& bodyWidth > 768 ) {
+
+		// 	// setTimeout(function() {
+
+		// 		wrapper.slick("unslick");
+
+		// 		$(".team-slider").slick("unslick");
+
+				// $(".team-slider .slide").each(function() {
+
+				// 	if( $(this).hasClass("slick-current") ) {
+
+				// 		idexSlide = $(".team-slider .slide").index(this);
+
+				// 	}
+
+				// 	$(this).css({"display" : "none"});
+
+				// });
+
+			// }, 400);
+
+			// setTimeout(function() {
+
+			// 	$(".team-slider .slide:eq("+ idexSlide +")").fadeIn(300);
+
+			// 	initialized = false;
+
+			// }, 1300);
+
+		// } else if( bodyWidth <= 768) {
+
+		// 	$(".team-slider .slide").css({"display" : "block"});
+
+			// if( initialized == false ) {
+
+				// $(".team-slider").slick({
+				//   dots: false,
+				//   arrows: false,
+				//   speed: 700,
+				//   fade: true,
+				//   slidesToShow: 1,
+				//   slidesToScroll: 1,
+				//   autoplay: true,
+				//   autoplaySpeed: 16000,
+				//   asNavFor: $(".teachers-miniature-slider")
+				// });
+
+				// $(".teachers-miniature-slider").slick({
+				// 	arrows: true,
+				// 	centerMode: true,
+			 //   		slidesToShow: 3,
+				// 	slidesToScroll: 2,
+				// 	centerMode: true,
+				// 	dots: false,
+				// 	asNavFor: $(".team-slider"),
+				// 	responsive: [
+				// 		{
+				// 		breakpoint: 768,
+				// 		settings: {
+				// 		   		slidesToShow: 3,
+				// 				slidesToScroll: 2
+				// 			}
+				// 		},
+				// 		{
+				// 		breakpoint: 600,
+				// 		settings: {
+				// 		   		slidesToShow: 1,
+				// 				slidesToScroll: 1
+				// 			}
+				// 		}
+				// 	]
+				// });
+
+			// }
+
+			// initialized = true;
+
+		// }
 	}
 
 
