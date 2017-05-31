@@ -876,6 +876,7 @@ ul.main-nav li a:hover span.tr {
     height: 730px;
     overflow: hidden;
     position: relative;
+    z-index: 2;
 }
 
 .promo-slider {
@@ -2852,6 +2853,7 @@ select {
     height: 730px;
     overflow: hidden;
     position: relative;
+    z-index: 2;
 }
 
 .about-us-slider {
