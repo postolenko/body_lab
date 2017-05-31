@@ -250,12 +250,23 @@
 	}
 
 	.close-card-popup {
-	    top: 13px;
+	    top: 9px;
+	}
+
+	.card-popup-header {
+	    padding: 10px 30px 15px 0;
 	}
 
 	.card-popup-header h2 {
 	    font-size: 25px;
 	    line-height: 27px;
+	}
+
+	.close-card-popup {
+	    width: 29px;
+	    height: 29px;
+	    font-size: 29px;
+	    line-height: 29px;
 	}
 
 	.card-table-row .cell h3 {
