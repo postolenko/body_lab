@@ -2771,6 +2771,10 @@ select {
     overflow: hidden;
 }
 
+.classes_slider .slick-track {
+    z-index: 2;
+}
+
 .classes_slider .slide-descript:before {
     display: none;
 }
