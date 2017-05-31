@@ -3170,6 +3170,7 @@ select {
     vertical-align: top;
     width: 168px;
     padding: 16px 0;
+    cursor: pointer;
     outline: none;
 }
 

@@ -249,6 +249,29 @@
 	    height: 140px;
 	}
 
+	.close-card-popup {
+	    top: 13px;
+	}
+
+	.card-popup-header h2 {
+	    font-size: 25px;
+	    line-height: 27px;
+	}
+
+	.card-table-row .cell h3 {
+	    font-size: 17px;
+	    line-height: 21px;
+	}
+
+	.card-table-row .cell p {
+	    font-size: 16px;
+	    line-height: 34px;
+	}
+
+	.cards-slider .slick-arrow {
+	    top: 90%;
+	}
+
 	/*-- /Main Page Section 6 --*/
 
 	/*-- Time table Section --*/
@@ -567,6 +590,20 @@
 		display: block;
 	    width: 90%;
 	    margin: 90px auto 80px auto;
+	}
+
+	.card-content {
+	    padding: 16px 1%;
+	}
+
+	.card-table-row .cell h3 {
+	    font-size: 11px;
+	    line-height: 14px;
+	}
+
+	.card-table-row .cell p {
+	    font-size: 14px;
+	    line-height: 28px;
 	}
 
 	/*-- /Main Page Section 6 --*/

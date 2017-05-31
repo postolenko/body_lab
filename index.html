@@ -18,7 +18,6 @@
 	<link rel="stylesheet" type="text/css" href="vendors/css/select.css" />
 	<script type="text/javascript" src="vendors/js/jquery.js"></script>
 	<script type="text/javascript" src="vendors/js/jquery.mCustomScrollbar.concat.min.js"></script>
-	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<script type="text/javascript" src="slick/slick.js"></script>
 	<script type="text/javascript" src="vendors/js/select.js"></script>
 	<script type="text/javascript" src="vendors/js/wow.min.js"></script>
@@ -112,7 +111,7 @@
 					
 					<div class="promo-slider-box">
 
-						<div class="promo-slider wow fadeIn">
+						<div class="promo-slider wow fadeIn" data-slider-name = "promo-slider">
 							<div class="slide orange-light-bottom">
 								<img src="img/slider/video_bg_1.jpg" alt="">
 								<video autoplay="autoplay" loop="loop" muted="muted" id="theVideo1">
@@ -151,7 +150,7 @@
 					</div>
 
 
-					<div class="popups-section">
+					<div class="popups-section" data-popup-slider-name = "promo-slider">
 						<div class="popup-bg"></div>
 						<button type="button" class="close-slide-popup">&#10006;</button>
 
@@ -672,7 +671,7 @@
 
 					</div>
 
-					<div class="popups-cards-sect">
+					<div class="popups-cards-sect scroll">
 						<div class="popup-card-bg"></div>
 
 						<div class="cards-slider">
@@ -1266,6 +1265,16 @@
 
 		<script type="text/javascript">
 
+			(function($){
+
+				$(window).on("load",function(){
+
+					$(".scroll").mCustomScrollbar();
+
+				});
+
+			})(jQuery);		
+
 			$(".promo-slider").slick({
 			  dots: false,
 			  speed: 700,
@@ -1328,6 +1337,7 @@
 			});
 
 		</script>
+		<script src="js/team_slider.js"></script>
 	
 	</div>
 

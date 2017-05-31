@@ -19,10 +19,6 @@
 	<link rel="stylesheet" type="text/css" href="vendors/css/select.css" />
 	<script type="text/javascript" src="vendors/js/jquery.js"></script>
 	<script type="text/javascript" src="vendors/js/jquery.mCustomScrollbar.concat.min.js"></script>
-	<!--[if lt IE 8]>
-		<script type="text/javascript" src="vendors/js/jquery_1.js"></script>
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
 	<script type="text/javascript" src="slick/slick.js"></script>
 	<script type="text/javascript" src="vendors/js/select.js"></script>
 	<script type="text/javascript" src="vendors/js/wow.min.js"></script>
@@ -115,7 +111,7 @@
 					
 					<div class="about-us-slider-box">
 
-						<div class="about-us-slider wow fadeIn">
+						<div class="about-us-slider wow fadeIn" data-slider-name = "about-us-slider">
 							<div class="slide orange-light-bottom">
 								<img src="img/slider/video_bg_1.jpg" alt="">
 								<video autoplay="autoplay" loop="loop" muted="muted" id="theVideo1">
@@ -155,7 +151,7 @@
 					</div>
 
 
-					<div class="popups-section" data-slider-name = "about-us-slider">
+					<div class="popups-section" data-popup-slider-name = "about-us-slider">
 						<div class="popup-bg"></div>
 						<button type="button" class="close-slide-popup">&#10006;</button>
 
@@ -317,6 +313,7 @@
 
 
 		</script>
+		<script src="js/team_slider.js"></script>
 	
 	</div>
 
