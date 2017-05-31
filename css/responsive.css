@@ -2,10 +2,6 @@
 
 	/*-- Header --*/
 
-/*	.header .col {
-		outline: 1px solid blue;
-	}*/
-
 	.header .col-1 {
 	    width: 16%;
 	}
@@ -134,11 +130,9 @@
 	.respmenubtn-box {
 	    display: inline-block;
 	    vertical-align: middle;
-	    /*outline: 1px solid blue;*/
 	}
 
 	.header .main-nav-sect {
-		/*display: block;*/
 		display: none;
 		height: 100%;
 		width: 120% !important;
@@ -182,10 +176,6 @@
 	/*-- /Header --*/
 
 	/*-- Class Inside Section 1 --*/
-
-	/*.classes_slider-box {
-	    margin: 30px 0 0 0;
-	}*/
 
 	.classes_slider .img-box {
 		height: 400px;
@@ -257,7 +247,6 @@
 
 	.card-img-block {
 	    height: 140px;
-	    /*margin: 0 0 10px 0;*/
 	}
 
 	/*-- /Main Page Section 6 --*/
@@ -314,10 +303,6 @@
 	/*-- /Blog-Inside Section 2 --*/
 
 	/*-- Team Slider --*/
-
-/*	.desctop-team-slider {
-		display: none;
-	}*/
 
 	.team-slider-box {
 	    padding: 35px 0 0 0;
@@ -541,75 +526,8 @@
 	    width: 60px;
 	}
 
-
-
-	/*-- Header --*/
-
-/*	.header-row {
-	    padding: 3px 35% 3px 2%;
-	}
-
-	.header .col-1 {
-	    width: 57%;
-	}
-
-	.respmenubtn-box {
-	    width: 23%;
-	}
-
-	.header .col-3 {
-	    display: none;
-	}
-
-	.respmenubtn-box {
-	    width: 39%;
-	}
-
-	.header .col-4 {
-	    width: 35%;
-	    right: 2%;
-	}
-*/
-
-	/*-- /Header --*/
-
-	/*-- Promo Slider --*/
-/*
-	.promo-slider-box {
-	    height: 100vh;
-	}
-
-	.promo-slider .slide {
-	    height: 100vh;
-	}
-
-	.center-block .play-btn {
-	    width: 63px;
-	    height: 63px;
-	    margin: 10px auto;
-	}
-
-	.center-block h2 {
-	    font-size: 24px;
-	    line-height: 39px;
-	    padding: 17px 0;
-	}*/
-
-	/*-- /Promo Slider --*/
-
 	/*-- Tabs --*/
 
-/*	.tabs.top-minus {
-	     top: 0; 
-	     margin-bottom: 0; 
-	}
-
-	.tab-nav li .tab-link {
-	    padding: 8px 13px;
-	    font-size: 15px;
-	    line-height: 19px;
-	}
-*/
 	.classes-thumbnails.thumb-380 .thumbnail {
 	    width: 98%;
 	}
@@ -667,10 +585,6 @@
 
 	/*-- Class Inside Section 1 --*/
 
-	/*.classes_slider-box {
-	    margin: 250px 0 0 0;
-	}
-*/
 	.classes_slider .img-box {
 	    height: 320px;
 	}
@@ -688,11 +602,6 @@
 
 }
 
-@media only screen and (max-width: 350px) {
-
-
-
-}
 
 @media only screen and (min-width: 901px) {
 
