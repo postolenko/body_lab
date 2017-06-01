@@ -35,6 +35,7 @@ $(document).ready(function() {
     var countArticlesBeforeLoading;
     var countArticlesAfterLoading;
     var articlesTimeLoading;
+    var articleBlockHeight;
     var angel;
 
     // --------------------------
@@ -477,6 +478,7 @@ $(document).ready(function() {
         // var countArticlesBeforeLoading;
         // var countArticlesAfterLoading;
         // var articlesTimeLoading;
+        // var articleBlockHeight;
         // var angel = 0;
 
         angel = 0;
@@ -491,7 +493,9 @@ $(document).ready(function() {
 
             setTimeout(function() {
 
-                $(".articles-block-inner").append("<div class='article add_block'></dov>");
+                $(".articles-block-inner").append("<div class='article add_block'></div>");
+
+                $(".add_block").html("<p>Bodylab Wellness Center, 3rd Floor, Nr.70, Weifang Rd.(W), Shanghai, China</p> <p>Bodylab Wellness Center, 3rd Floor, Nr.70, Weifang Rd.(W), Shanghai, China</p><p>Bodylab Wellness Center, 3rd Floor, Nr.70, Weifang Rd.(W), Shanghai, China</p><p>Bodylab Wellness Center, 3rd Floor, Nr.70, Weifang Rd.(W), Shanghai, China</p>");
 
             }, 2000);            
 
@@ -511,15 +515,17 @@ $(document).ready(function() {
 
                 if(countArticlesAfterLoading > countArticlesBeforeLoading) {
 
-                    clearInterval(articlesTimeLoading);                   
+                    clearInterval(articlesTimeLoading);
+
+                    articleBlockHeight = $(".articles-block-inner .article:last-child").offset().top + $(".articles-block-inner .article:last-child").outerHeight(true) - $(".articles-block-inner").offset().top;
 
                     $(".articles-block-hover").animate({
-                        "height" : $(".articles-block-inner").height() + "px"
-                    }, 300);
+                        "height" : articleBlockHeight + "px"
+                    }, 500);
 
                     setTimeout(function() {
                         $(".articles-block-hover").css({"height" : "auto"});
-                    }, 400);
+                    }, 900);
 
                 }
 

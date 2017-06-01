@@ -2289,15 +2289,22 @@ select {
 }
 
 .articles-block-hover {
+    display: block;
     overflow: hidden;
 }
 
-.articles-block-inner {
+/*.articles-block-inner {
+    display: block;
     height: auto;
-}
+}*/
 
 .add_block {
-    height: 500px;
+    /*min-height: 300px;*/
+    font-family: "Open Sans", Arial, Verdana, sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: normal;
+    color: #ffffff;
 }
 
 .article {
@@ -2711,7 +2718,6 @@ select {
     background-image: url(../img/refresh_icon.png);
     background-repeat: no-repeat;
     background-position: center;
-    /*transform : rotate(70deg);*/
 }
 
 /*-- /Blog Section 1 --*/
