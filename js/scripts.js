@@ -32,6 +32,12 @@ $(document).ready(function() {
 
     // --------------------------
 
+    var countArticlesBeforeLoading;
+    var countArticlesAfterLoading;
+    var articlesTimeLoading;
+    var angel;
+
+    // --------------------------
 
     getScrollToTopBtn();
 
@@ -223,10 +229,7 @@ $(document).ready(function() {
 
             getActiveTabBgPosition(indexTabs, attrForActiveTabNav);
 
-
         });
-
-
 
     });
 
@@ -462,6 +465,65 @@ $(document).ready(function() {
                 return false;
 
             });
+
+        });
+
+    });
+
+    // ----------------------------------
+
+    $(function() {
+
+        // var countArticlesBeforeLoading;
+        // var countArticlesAfterLoading;
+        // var articlesTimeLoading;
+        // var angel = 0;
+
+        angel = 0ж
+
+        $(".load-more").click(function(loadMoreEvent) {
+
+            loadMoreEvent.preventDefault();
+
+            countArticlesBeforeLoading = $(".articles-block-inner .article").length;
+
+            $(".articles-block-hover").height($(".articles-block-hover").height());
+
+            setTimeout(function() {
+
+                $(".articles-block-inner").append("<div class='article add_block'></dov>");
+
+            }, 2000);            
+
+            articlesTimeLoading = setInterval(function() {
+
+                countArticlesAfterLoading = $(".articles-block-inner .article").length;
+
+                angel+=15;
+
+                $(".load-more .refresh-icon").css({
+                    "-webkit-transform" : "rotate("+ angel +"deg)",
+                    "-moz-transform" : "rotate("+ angel +"deg)",
+                    "-ms-transform" : "rotate("+ angel +"deg)",
+                    "-o-transform" : "rotate("+ angel +"deg)",
+                    "transform" : "rotate("+ angel +"deg)"
+                });
+
+                if(countArticlesAfterLoading > countArticlesBeforeLoading) {
+
+                    clearInterval(articlesTimeLoading);                   
+
+                    $(".articles-block-hover").animate({
+                        "height" : $(".articles-block-inner").height() + "px"
+                    }, 300);
+
+                    setTimeout(function() {
+                        $(".articles-block-hover").css({"height" : "auto"});
+                    }, 400);
+
+                }
+
+            }, 100);
 
         });
 
