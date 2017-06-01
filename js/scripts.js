@@ -479,7 +479,7 @@ $(document).ready(function() {
         // var articlesTimeLoading;
         // var angel = 0;
 
-        angel = 0ж
+        angel = 0;
 
         $(".load-more").click(function(loadMoreEvent) {
 
