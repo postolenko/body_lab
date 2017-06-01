@@ -2282,24 +2282,16 @@ select {
 
 /*-- Blog Section 1 --*/
 
-.articles-block {
-    display: block;
-    /*overflow: hidden;*/
-    height: auto;
-}
-
-.articles-block-hover {
-    display: block;
-    overflow: hidden;
-}
-
-/*.articles-block-inner {
+/*.articles-block {
     display: block;
     height: auto;
 }*/
 
+.articles-block-hover {
+    overflow: hidden;
+}
+
 .add_block {
-    /*min-height: 300px;*/
     font-family: "Open Sans", Arial, Verdana, sans-serif;
     font-size: 18px;
     line-height: 26px;
