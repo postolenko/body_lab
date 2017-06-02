@@ -531,6 +531,8 @@ $(document).ready(function() {
 
                             $(".load-more").text($("#last-post").text());
 
+                            $(".load-more").attr("class", "load-more-disabled");
+
                         }
 
                     }, 900);
