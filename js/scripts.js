@@ -537,7 +537,7 @@ $(document).ready(function() {
 
                                 $(".load-more-disabled").removeClass("box-shadow");
 
-                            }, 500);
+                            }, 400);
 
                         }
 
