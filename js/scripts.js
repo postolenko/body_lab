@@ -605,7 +605,8 @@ $(document).ready(function() {
             });
 
             $(".class-promo + .section").css({
-                "padding-top" : $(".classes_slider").offset().top + $(".classes_slider").height() - $(".class-promo + .section").offset().top + "px"
+                // "padding-top" : $(".classes_slider").offset().top + $(".classes_slider").height() - $(".class-promo + .section").offset().top + "px"
+                "padding-top" : $(".classes_slider-box").height() - ( $(".class-promo + .section").offset().top + $(".classes_slider-box").offset().top );
             });
 
         }
