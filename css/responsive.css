@@ -181,6 +181,11 @@
 		height: 400px;
 	}
 
+/*	.classes_slider .img-box img {
+	    width: auto;
+	    height: 100%;
+	}*/
+
 	.class-promo + .section {
 	    padding: 135px 0 20px 0;
 	}

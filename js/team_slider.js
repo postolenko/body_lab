@@ -187,6 +187,12 @@ $(document).ready(function() {
 					]
 				});
 
+				setTimeout(function() {
+
+					$(".teams-sliders-box").css({"height" : "auto"});
+
+				}, 700);
+
 			}
 
 			initialized = true;
