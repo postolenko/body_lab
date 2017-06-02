@@ -489,15 +489,7 @@ $(document).ready(function() {
 
             countArticlesBeforeLoading = $(".articles-block-inner .article").length;
 
-            $(".articles-block-hover").height($(".articles-block-hover").height());
-
-            setTimeout(function() {
-
-                $(".articles-block-inner").append("<div class='article add_block'></div>");
-
-                $(".add_block").html("<p>Bodylab Wellness Center, 3rd Floor, Nr.70, Weifang Rd.(W), Shanghai, China</p> <p>Bodylab Wellness Center, 3rd Floor, Nr.70, Weifang Rd.(W), Shanghai, China</p><p>Bodylab Wellness Center, 3rd Floor, Nr.70, Weifang Rd.(W), Shanghai, China</p><p>Bodylab Wellness Center, 3rd Floor, Nr.70, Weifang Rd.(W), Shanghai, China</p>");
-
-            }, 2000);            
+            $(".articles-block-hover").height($(".articles-block-hover").height());          
 
             articlesTimeLoading = setInterval(function() {
 
