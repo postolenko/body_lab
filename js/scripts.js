@@ -513,19 +513,15 @@ $(document).ready(function() {
 
                     clearInterval(articlesTimeLoading);
 
-                    if( $(".articles-block-inner #last-post").length > 0 ) {
-
-                        articleBlockHeight = $(".articles-block-inner #last-post").offset().top + $(".articles-block-inner #last-post").outerHeight(true) - $(".articles-block-inner").offset().top;                        
-
-                    } else {
+                    if( !$(".articles-block-inner #last-post").length > 0 ) {
 
                         articleBlockHeight = $(".articles-block-inner .article:last-child").offset().top + $(".articles-block-inner .article:last-child").outerHeight(true) - $(".articles-block-inner").offset().top;
 
-                    }
+                        $(".articles-block-hover").animate({
+                            "height" : articleBlockHeight + "px"
+                        }, 500);
 
-                    $(".articles-block-hover").animate({
-                        "height" : articleBlockHeight + "px"
-                    }, 500);
+                    }
 
                     setTimeout(function() {
 
