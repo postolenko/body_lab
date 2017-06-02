@@ -489,7 +489,11 @@ $(document).ready(function() {
 
             countArticlesBeforeLoading = $(".articles-block-inner .article").length;
 
-            $(".articles-block-hover").height($(".articles-block-hover").height());          
+            $(".articles-block-hover").height($(".articles-block-hover").height());
+
+            setTimeout(function() {
+                $("#last-post").append($("<div id='last-post'></div>");
+            }, 2000);            
 
             articlesTimeLoading = setInterval(function() {
 

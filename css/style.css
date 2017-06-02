@@ -2286,6 +2286,11 @@ select {
     overflow: hidden;
 }
 
+#last-post {
+    height: 200px;
+    background: rgba(35, 39, 41, 1);
+}
+
 .article {
     position: relative;
     margin: 30px 0;
