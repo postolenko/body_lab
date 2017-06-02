@@ -611,6 +611,8 @@ $(document).ready(function() {
                     "padding-top" : $(".classes_slider-box").height() - ( $(".class-promo + .section").offset().top + $(".classes_slider-box").offset().top )
                 });
 
+                console.log( $(".classes_slider-box").height() +"   "+ $(".class-promo + .section").offset().top +"   "+ $(".classes_slider-box").offset().top );
+
             }, 700);           
 
         }

@@ -2886,6 +2886,7 @@ select {
 }
 
 .classes_slider-box {
+    height: auto;
     margin: 108px 0 10px 0;
 }
 
