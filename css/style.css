@@ -2779,9 +2779,9 @@ select {
 }
 
 .load-more-disabled.box-shadow {
-    -webkit-box-shadow: 0px 7px 15px 0px rgba(238, 35, 23, .4);
-    -moz-box-shadow: 0px 7px 15px 0px rgba(238, 35, 23, .4);
-    box-shadow: 0px 7px 15px 0px rgba(238, 35, 23, .4);
+    -webkit-box-shadow: 0px 7px 18px 0px rgba(238, 35, 23, .4);
+    -moz-box-shadow: 0px 7px 18px 0px rgba(238, 35, 23, .4);
+    box-shadow: 0px 7px 18px 0px rgba(238, 35, 23, .4);
 }
 
 /*-- /Blog Section 1 --*/
