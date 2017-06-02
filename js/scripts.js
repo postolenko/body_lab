@@ -515,13 +515,7 @@ $(document).ready(function() {
 
                     if( $(".articles-block-inner #last-post").length > 0 ) {
 
-                        articleBlockHeight = $(".articles-block-inner #last-post").offset().top + $(".articles-block-inner #last-post").outerHeight(true) - $(".articles-block-inner").offset().top;
-                        setTimeout(function() {
-
-                            $(".load-more").fadeOut(300);
-
-                        }, 300);
-                        
+                        articleBlockHeight = $(".articles-block-inner #last-post").offset().top + $(".articles-block-inner #last-post").outerHeight(true) - $(".articles-block-inner").offset().top;                        
 
                     } else {
 
@@ -534,7 +528,15 @@ $(document).ready(function() {
                     }, 500);
 
                     setTimeout(function() {
+                        
                         $(".articles-block-hover").css({"height" : "auto"});
+
+                        if($(".articles-block-inner #last-post").length > 0) {
+
+                            $(".load-more").fadeOut(300);
+
+                        }
+
                     }, 900);
 
                 }
