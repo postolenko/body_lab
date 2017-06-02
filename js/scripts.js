@@ -509,7 +509,7 @@ $(document).ready(function() {
                     "transform" : "rotate("+ angel +"deg)"
                 });
 
-                if(countArticlesAfterLoading > countArticlesBeforeLoading) {
+                if(countArticlesAfterLoading > countArticlesBeforeLoading || $(".articles-block-inner #last-post").length > 0 ) {
 
                     clearInterval(articlesTimeLoading);
 
