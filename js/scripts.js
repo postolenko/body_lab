@@ -516,8 +516,12 @@ $(document).ready(function() {
                     if( $(".articles-block-inner #last-post").length > 0 ) {
 
                         articleBlockHeight = $(".articles-block-inner #last-post").offset().top + $(".articles-block-inner #last-post").outerHeight(true) - $(".articles-block-inner").offset().top;
+                        setTimeout(function() {
 
-                        $(".load-more").fadeOut(300);
+                            $(".load-more").fadeOut(300);
+
+                        }, 300);
+                        
 
                     } else {
 
