@@ -509,7 +509,17 @@ $(document).ready(function() {
 
                     clearInterval(articlesTimeLoading);
 
-                    articleBlockHeight = $(".articles-block-inner .article:last-child").offset().top + $(".articles-block-inner .article:last-child").outerHeight(true) - $(".articles-block-inner").offset().top;
+                    if( $(".articles-block-inner #last-post").length > 0 ) {
+
+                        articleBlockHeight = $(".articles-block-inner #last-post").offset().top + $(".articles-block-inner #last-post").outerHeight(true) - $(".articles-block-inner").offset().top;
+
+                        $(".load-more").fadeOut(300);
+
+                    } else {
+
+                        articleBlockHeight = $(".articles-block-inner .article:last-child").offset().top + $(".articles-block-inner .article:last-child").outerHeight(true) - $(".articles-block-inner").offset().top;
+
+                    }
 
                     $(".articles-block-hover").animate({
                         "height" : articleBlockHeight + "px"
