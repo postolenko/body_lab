@@ -2718,6 +2718,7 @@ select {
     vertical-align: top;
     min-width: 262px;
     height: 100%;
+    cursor: default;
     margin: 10px 0 20px 0;
     padding: 12px 1%;
     font-family: "Open Sans", Arial, Verdana, sans-serif;
@@ -2738,6 +2739,19 @@ select {
     background: -webkit-linear-gradient(left, rgba(238,35,23,1) 0%,rgba(252,77,6,1) 100%);
     background: linear-gradient(to right, rgba(238,35,23,1) 0%,rgba(252,77,6,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ee2317', endColorstr='#fc4d06',GradientType=1 );
+}
+
+.load-more-disabled:hover {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.load-more-disabled:active,
+.load-more-disabled.active {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
 }
 
 /*-- /Blog Section 1 --*/
