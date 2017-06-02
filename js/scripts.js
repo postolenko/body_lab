@@ -491,9 +491,9 @@ $(document).ready(function() {
 
             $(".articles-block-hover").height($(".articles-block-hover").height());
 
-            setTimeout(function() {
-                $(".articles-block-inner").append($("<div id='last-post'><p>The end. Will not continue. Over. Rashodims'a</p></div>"));
-            }, 2000);            
+            // setTimeout(function() {
+            //     $(".articles-block-inner").append($("<div id='last-post'><p>The end. Will not continue. Over. Rashodims'a</p></div>"));
+            // }, 2000);            
 
             articlesTimeLoading = setInterval(function() {
 
