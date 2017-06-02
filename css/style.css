@@ -2286,20 +2286,18 @@ select {
     overflow: hidden;
 }
 
+.articles-block-inner {
+    position: relative;
+}
+
 #last-post {
-    padding: 20px 2%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    border-radius: 50%;
-    background: rgba(35, 39, 41, 1);
-    text-align: center;
-    font-family: "Open Sans", Arial, Verdana, sans-serif;
-    font-size: 18px;
-    line-height: 26px;
-    font-weight: normal;
-    color: #ffffff;
+    display: block;
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
 .article {

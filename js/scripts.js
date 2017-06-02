@@ -528,12 +528,12 @@ $(document).ready(function() {
                     }, 500);
 
                     setTimeout(function() {
-                        
+
                         $(".articles-block-hover").css({"height" : "auto"});
 
                         if($(".articles-block-inner #last-post").length > 0) {
 
-                            $(".load-more").fadeOut(300);
+                            $(".load-more").text($("#last-post").text());
 
                         }
 
