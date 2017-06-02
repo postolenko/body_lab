@@ -531,7 +531,13 @@ $(document).ready(function() {
 
                             $(".load-more").text($("#last-post").text());
 
-                            $(".load-more").attr("class", "load-more-disabled");
+                            $(".load-more").attr("class", "load-more-disabled box-shadow");
+
+                            setTimeout(function() {
+
+                                $(".load-more-disabled").removeClass("box-shadow");
+
+                            }, 300);
 
                         }
 
