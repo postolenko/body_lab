@@ -1,4 +1,4 @@
-@media only screen and (max-width: 1360px) {
+@media only screen and (max-width: 1376px) {
 
 	/*-- Header --*/
 
@@ -15,7 +15,7 @@
 	}
 
 	ul.main-nav li a {
-	    padding: 2px 12px;
+	    padding: 2px 10px;
 	    font-size: 17px;
 	    line-height: 24px;
 	}
@@ -163,6 +163,15 @@
 	    line-height: 24px;
 	    padding: 9px 2%;
 	    text-transform: uppercase;
+	}
+
+	ul.main-nav li a:hover {
+	    background: rgba(255, 255, 255, 1);
+	    color: #f6390e;
+	}
+
+	ul.main-nav li a:hover:before {
+	    opacity: 0;
 	}
 
 	ul.main-nav li a span.tr {
