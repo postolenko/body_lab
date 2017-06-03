@@ -2270,9 +2270,10 @@ select {
 .table-row .cell .teacher {
     font-family: "Open Sans", Arial, Verdana, sans-serif;
     font-size: 16px;
-    line-height: 22px;
+    line-height: 20px;
     font-weight: normal;
     color: #778289;
+    padding: 1px 0;
 }
 
 .tch-icon {
