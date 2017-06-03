@@ -2170,7 +2170,7 @@ select {
 .table {
     display: table;
     width: 100%;
-    min-width: 750px;
+    min-width: 600px;
     border-collapse: collapse;
     margin: 10px 0 39px 0;
 }
@@ -2241,12 +2241,28 @@ select {
     color: #ffffff;
 }
 
+.table-row .cell .time .light {
+    font-weight: normal;
+}
+
 .table-row .cell .class-name {
     font-family: "Open Sans", Arial, Verdana, sans-serif;
     font-size: 16px;
     line-height: 22px;
     font-weight: bold;
     color: #f73c0d;
+}
+
+.clock-icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 18px;
+    height: 18px;
+    position: relative;
+    top: -2px;
+    background-image: url(../img/clock.png);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .table-row .cell .teacher {
