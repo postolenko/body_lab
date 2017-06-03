@@ -2170,7 +2170,7 @@ select {
 .table {
     display: table;
     width: 100%;
-    min-width: 600px;
+    min-width: 630px;
     border-collapse: collapse;
     margin: 10px 0 39px 0;
 }
@@ -2256,10 +2256,12 @@ select {
 .clock-icon {
     display: inline-block;
     vertical-align: middle;
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
     position: relative;
     top: -2px;
+    margin: 0 3px 0 0;
+    background-size: 100%;
     background-image: url(../img/clock.png);
     background-repeat: no-repeat;
     background-position: center;

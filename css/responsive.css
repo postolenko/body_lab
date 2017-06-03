@@ -316,6 +316,12 @@
 	    line-height: 16px;
 	}
 
+	.clock-icon {
+	    width: 13px;
+	    height: 13px;
+	    top: -1px;
+	}
+
 	/*-- /Time table Section --*/
 
 	/*-- Blog Section 1 --*/
