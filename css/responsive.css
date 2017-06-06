@@ -115,11 +115,11 @@
 	}
 
 	.header .col-1 {
-	    width: 26%;
+	    width: 28%;
 	}
 
 	.header .col-3 {
-	    width: 26%;
+	    width: 21%;
 	}
 
 	.header .col-4 {
@@ -140,8 +140,8 @@
 		top: 0;
 		left: 0;
 		z-index: 10;
-		padding: 35px 20% 20px 0;
-		background: rgba(0, 0, 0, .8);
+		padding: 35px 17% 20px 0;
+		background: rgba(238, 35, 23, .9);
 		overflow-y: scroll;
 	}
 
@@ -165,9 +165,12 @@
 	    text-transform: uppercase;
 	}
 
-	ul.main-nav li a:hover {
-	    background: rgba(255, 255, 255, 1);
-	    color: #f6390e;
+	ul.main-nav li a:hover,
+	ul.main-nav li a:active,
+	ul.main-nav li a.active,
+	ul.main-nav li a.active:hover {
+	    background: rgba(238, 35, 23, .9);
+	    color: #ffffff;
 	}
 
 	ul.main-nav li a:hover:before {

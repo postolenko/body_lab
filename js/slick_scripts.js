@@ -73,7 +73,7 @@ $(document).on('ready', function () {
     // ----------------
 
 
-     $(".classe_bg_slider").not('.slick-initialized').slick({
+     $(".class_bg_slider").not('.slick-initialized').slick({
       dots: false,
       arrows: false,
       speed: 700,
@@ -84,13 +84,13 @@ $(document).on('ready', function () {
       zIndex: 1
     });
 
-    $(".classe_bg_slider").on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    $(".class_bg_slider").on('beforeChange', function(event, slick, currentSlide, nextSlide){
 
-        $(".classe_bg_slider .slide").each(function() {
+        $(".class_bg_slider .slide").each(function() {
 
-            if( $(".classe_bg_slider .slide:eq("+ currentSlide +") video").length > 0) {
+            if( $(".class_bg_slider .slide:eq("+ currentSlide +") video").length > 0) {
 
-                videoId =  window[$(".promo-slider .slide:eq("+ currentSlide +") video").attr("id")];
+                videoId =  window[$(".class_bg_slider .slide:eq("+ currentSlide +") video").attr("id")];
 
                 videoId.pause();
 
@@ -98,9 +98,9 @@ $(document).on('ready', function () {
 
         });
 
-        if( $(".classe_bg_slider .slide:eq("+ nextSlide +") video").length > 0 ) {
+        if( $(".class_bg_slider .slide:eq("+ nextSlide +") video").length > 0 ) {
 
-            videoId =  window[$(".promo-slider .slide:eq("+ nextSlide +") video").attr("id")];
+            videoId =  window[$(".class_bg_slider .slide:eq("+ nextSlide +") video").attr("id")];
 
             videoId.play();
 

@@ -478,6 +478,7 @@ a:active {
     background-image: url(../img/header_bg.jpg);
     background-position: center;
     background-size: cover;
+    background-color: rgb(247, 61, 14);
     position: relative;
     z-index: 5;
 }
@@ -890,12 +891,12 @@ ul.main-nav li a:hover span.tr {
     -webkit-tap-highlight-color: transparent;
 }
 
-.respmenubtn.active {
+/*.respmenubtn.active {
     position: fixed;
     top: 3px;
     left: 2%;
 }
-
+*/
 .respmenubtn:hover span {
     border: 1px solid #ffffff;
     background: rgba(255, 255, 255, 1);
@@ -904,8 +905,8 @@ ul.main-nav li a:hover span.tr {
 .respmenubtn.active span {
     position: relative;
     top: -1px;
-    border: 1px solid #fb8c72;
-    background: rgba(251, 140, 114, 1);
+    border: 1px solid #ffffff;
+    background: rgba(255, 255, 255, 1);
 }
 
 .respmenubtn.active span:last-child {
@@ -1958,6 +1959,7 @@ ul.main-nav li a:hover span.tr {
     vertical-align: top;
     width: 25%;
     max-width: 250px;
+    margin: 40px 0 50px 0;
 }
 
 .cards-thumbnails .inner {
