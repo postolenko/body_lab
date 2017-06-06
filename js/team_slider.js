@@ -29,7 +29,7 @@ $(document).ready(function() {
     }
 
 	$(".team-big-slider-box").css({
-		"height" : 0,
+		"height": "0px",
 		"overflow" : "hidden"
 	});
 
@@ -37,60 +37,90 @@ $(document).ready(function() {
 
 		slideClick.preventDefault();
 
-		if( $(".teachers-miniature-slider.slick-initialized").length == 0 && bodyWidth > 768) {
+		if( !$(".teachers-miniature-slider.slick-initialized").length &&
+			!$(".team-slider.slick-initialized").length &&
+		 	bodyWidth > 768) {
 
 			idexSlide = $(".teachers-miniature-slider .slide").index(this);
 
-			$(".teachers-miniature-slider .slide").each(function() {
+			if($(this).hasClass("active")) {
 
-				if($(this).hasClass("active")) {
+				return true;
 
-					$(this).removeClass("active");
+			} else {
 
-					$(".team-slider .slide").each(function() {
+				$(".teachers-miniature-slider .slide").removeClass("active");
 
-						if($(this).is(":visible")) {
+				$(".team-slider .slide").removeClass("active");
 
-							$(this).fadeOut(300);
+				$(".team-slider .slide").each(function() {
 
-						}
+					if($(this).is(":visible")) {
 
-					});
+						$(".team-slider").css({
+							"height": $(this).height() + "px"
+						});
 
-				}
+						$(this).fadeOut(300);
 
-			});
+					}
 
-			setTimeout(function() {
-
-				$(".team-slider .slide:eq("+ idexSlide +")").fadeIn(400);
-
-			}, 500);
-
-			$(this).addClass("active");			
-
-		}
-
-		if( $(".team-big-slider-box").height() <= 0 ) {
-
-			if( $(".teachers-miniature-slider.slick-initialized").length == 0 && bodyWidth > 768) {
-
-				initialTeamSlider();
+				});
 
 			}
 
-			$(".team-big-slider-box").delay(300).animate({
+			setTimeout(function() {
+
+				$(".team-slider .slide:eq("+ idexSlide +")").fadeIn(500);
+
+				$(".team-big-slider-box").animate({
+					"height": $(".team-slider .slide:eq("+ idexSlide +")").height() + "px"
+				}, 700);
+
+			}, 500);
+
+			setTimeout(function() {
+
+				$(".team-big-slider-box").css({
+					"height": "auto",
+					"overflow" : "none"
+				});
+
+				$(".team-slider").css({
+					"height": "auto"
+				});
+
+			}, 1500);
+
+			$(this).addClass("active");
+
+		} else {
+
+			if( $(this).hasClass("active") ) {
+
+				return true;
+
+			} else {
+
+				$(".teachers-miniature-slider .slide").removeClass("active");
+
+				$(".team-slider .slide").removeClass("active");
+
+				$(this).addClass("active");
+
+			}
+
+			$(".team-big-slider-box").animate({
 				"height": $(".team-slider").height() + "px"
 			}, 700);
 
 			setTimeout(function() {
 
 				$(".team-big-slider-box").css({
-					"height": "auto !important",
-					"overflow" : "none"
+					"height": "auto"
 				});
 
-			}, 2000);
+			}, 1500);
 
 		}
 
@@ -98,7 +128,7 @@ $(document).ready(function() {
 
 	function initialTeamSlider() {
 
-		if( $(".teachers-miniature-slider").length > 0 && $(".team-slider").length > 0 ) {
+		if( $(".teachers-miniature-slider").length > 0 && $(".team-slider").length > 0 && bodyWidth > 768 ) {
 
 	    	$(".teachers-miniature-slider .slide").each(function() {
 
@@ -120,7 +150,24 @@ $(document).ready(function() {
 
 					});
 
-					$(".team-slider .slide:eq("+ idexSlide +")").delay(400).fadeIn(300);
+					if( !$(".team-slider.slick-initialized").length && !$(".teachers-miniature-slider.slick-initialized").length ) {
+
+						$(".team-slider .slide:eq("+ idexSlide +")").delay(400).fadeIn(300);
+
+						$(".team-big-slider-box").delay(200).animate({
+							"height": $(".team-slider .slide:eq("+ idexSlide +")").height() + "px"
+						}, 700);
+
+						setTimeout(function() {
+
+							$(".team-big-slider-box").css({
+								"height": "auto",
+								"overflow" : "none"
+							});
+
+						}, 1700);
+
+					}
 
 				}
 
@@ -130,7 +177,31 @@ $(document).ready(function() {
 
     }
 
-	function slick_slider() {
+
+    var intervalInitialized = setInterval(function() {
+
+		if( $(".team-slider.slick-initialized").length > 0 && $(".teachers-miniature-slider.slick-initialized").length > 0 && bodyWidth <= 768 ) {
+
+			clearTimeout( intervalInitialized );
+
+			for( var initialSlide = 0; initialSlide <= $(".teachers-miniature-slider .slide").length - 1; initialSlide++ ) {
+
+				if( $(".teachers-miniature-slider .slide:eq("+ initialSlide +")").hasClass("active") ) {
+
+					$(".team-big-slider-box").css({
+						"height": "auto",
+						"overflow" : "none"
+					});
+
+				}
+
+			}
+
+		}
+
+	}, 100);
+
+	function slick_slider() {	
 
 		if( $(".teachers-miniature-slider").length > 0 && $(".team-slider").length > 0 ) {
 
@@ -145,37 +216,30 @@ $(document).ready(function() {
 
 					wrapperTeamSlider.slick("unslick");
 					wrapperMiniatureSlider.slick("unslick");
-					$(".teachers-miniature-slider .slide").css({"display" : "inline-block"});
+					$(".teachers-miniature-slider .slide").css({
+						"display" : "inline-block",
+						"visibility" : "visible"
+						});
 					initialTeamSlider();
 
 				}, 400);
-
-				if( $(".team-big-slider-box").height() > 0 && initialized == true ) {
-
-					$(".team-big-slider-box").delay(300).animate({
-						"height": $(".team-slider").height() + "px"
-					}, 700);
-
-					setTimeout(function() {
-
-						$(".team-big-slider-box").css({
-							"height": "auto !important",
-							"overflow" : "none"
-						});
-
-					}, 1100);
-
-				}
 
 				initialized = false;
 
 			} else if( bodyWidth <= 768) {
 
-				if( initialized == false ) {
-
 					$(".team-slider .slide").css({"display" : "block"});
 					$(".teachers-miniature-slider .slide").css({"display" : "block"});
-					// $(".team-big-slider-box").css({"height": "auto"});
+
+					$(".teachers-miniature-slider .slide").each(function() {
+
+						if($(this).hasClass("active")) {
+
+							idexSlide = $(".teachers-miniature-slider .slide.active").index();
+
+						}
+
+					});
 
 					wrapperTeamSlider.not('.slick-initialized').slick({
 					  dots: false,
@@ -224,11 +288,17 @@ $(document).ready(function() {
 						]
 					});
 
-					$(".teams-sliders-box").css({"height" : "auto"});
+					initialized = true;
 
-				}
+					setTimeout(function() {
 
-				initialized = true;
+						if( $(".team-big-slider-box").height() > 0 ) {
+
+							$(".team-big-slider-box").css({"height" : "auto"});
+
+						}
+
+					}, 500);
 
 			}
 

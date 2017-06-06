@@ -656,7 +656,7 @@ $(document).ready(function() {
                     "padding-top" : $(".classes_slider-box .bottom_coor").offset().top - $(".class-promo + .section").offset().top
                 });
 
-            }, 300);            
+            }, 300);
 
         }
 
