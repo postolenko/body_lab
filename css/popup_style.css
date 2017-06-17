@@ -111,7 +111,8 @@
 }
 
 .qa-bottom-row a {
-
+	display: inline-block;
+	vertical-align: top;
 }
 
 .payment-card p {
@@ -125,7 +126,7 @@
 
 
 @media only screen and (max-width: 600px) {
-	
+
 	/*-- Popups --*/
 
 	.qa-thumbnails {
