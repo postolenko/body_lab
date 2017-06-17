@@ -125,7 +125,12 @@
 
 
 @media only screen and (max-width: 600px) {
+	
 	/*-- Popups --*/
+
+	.qa-thumbnails {
+	    margin: 5px 0;
+	}
 
 	.qa-thumbnails .thumbnail {
 		width: 100%;
