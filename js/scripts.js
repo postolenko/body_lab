@@ -404,84 +404,6 @@ $(document).ready(function() {
 
     });
 
-    // ----------------------------------
-
-    // $(function() {
-
-    //     var countArticlesBeforeLoading;
-    //     var countArticlesAfterLoading;
-    //     var articlesTimeLoading;
-    //     var articleBlockHeight;
-    //     var angel = 0;
-
-    //     $(".load-more").click(function(loadMoreEvent) {
-
-    //         loadMoreEvent.preventDefault();
-
-    //         countArticlesBeforeLoading = $(".articles-block-inner .article").length;
-
-    //         $(".articles-block-hover").height($(".articles-block-hover").height());
-
-    //         // setTimeout(function() {
-    //         //     $(".articles-block-inner").append($("<div id='last-post'><p>The end. Will not continue. Over. Rashodims'a</p></div>"));
-    //         // }, 2000);            
-
-    //         articlesTimeLoading = setInterval(function() {
-
-    //             countArticlesAfterLoading = $(".articles-block-inner .article").length;
-
-    //             angel+=15;
-
-    //             $(".load-more .refresh-icon").css({
-    //                 "-webkit-transform" : "rotate("+ angel +"deg)",
-    //                 "-moz-transform" : "rotate("+ angel +"deg)",
-    //                 "-ms-transform" : "rotate("+ angel +"deg)",
-    //                 "-o-transform" : "rotate("+ angel +"deg)",
-    //                 "transform" : "rotate("+ angel +"deg)"
-    //             });
-
-    //             if(countArticlesAfterLoading > countArticlesBeforeLoading || $(".articles-block-inner #last-post").length > 0 ) {
-
-    //                 clearInterval(articlesTimeLoading);
-
-    //                 if( !$(".articles-block-inner #last-post").length ) {
-
-    //                     articleBlockHeight = $(".articles-block-inner .article:last-child").offset().top + $(".articles-block-inner .article:last-child").outerHeight(true) - $(".articles-block-inner").offset().top;
-
-    //                     $(".articles-block-hover").animate({
-    //                         "height" : articleBlockHeight + "px"
-    //                     }, 500);
-
-    //                 }
-
-    //                 setTimeout(function() {
-
-    //                     $(".articles-block-hover").css({"height" : "auto"});
-
-    //                     if($(".articles-block-inner #last-post").length > 0) {
-
-    //                         $(".load-more").text($("#last-post").text());
-
-    //                         $(".load-more").attr("class", "load-more-disabled box-shadow");
-
-    //                         setTimeout(function() {
-
-    //                             $(".load-more-disabled").removeClass("box-shadow");
-
-    //                         }, 400);
-
-    //                     }
-
-    //                 }, 900);
-
-    //             }
-
-    //         }, 100);
-
-    //     });
-
-    // });
-
     // ------------------------------------------------------------------------------
 
     function getActiveTabBgPosition(indexTabs, indexActiveTab) {
@@ -593,5 +515,77 @@ $(document).ready(function() {
         }
 
     }
+
+    // --------------------------------
+
+    $(function() {
+
+        var qoarcodePopupName;
+
+         var popupHeaderTopCoor;
+
+        $(".buy-card-btn").click(function() {
+
+            parentEl = $(this).parent();
+
+            for(;;) {
+
+                parentEl = parentEl.parent();
+
+                if(parentEl.hasClass("card-content")) {
+
+                    qoarcodePopupName = parentEl.attr("data-quarcode-popup");
+
+                    break;
+
+                }
+
+            }
+
+            parentEl.fadeOut(300);
+
+            $("[data-quarcode-popup-name = '"+ qoarcodePopupName +"']").delay(700).fadeIn(400);
+
+        });
+
+        $(".close-quarcode-ok").click(function(qaEvent) {
+
+            qaEvent.preventDefault();
+
+            $("[data-quarcode-popup-name = '"+ qoarcodePopupName +"']").fadeOut(400);
+
+             parentEl.delay(700).fadeIn(300);
+
+        });
+
+        $(".close-card-popup").click(function() {
+
+            if(parentEl.is(":hidden")) {
+
+                $("[data-quarcode-popup-name = '"+ qoarcodePopupName +"']").fadeOut(400);
+
+                parentEl.delay(700).fadeIn(300);
+
+            }
+
+        });
+
+
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // ---------------------------------
 
 });
