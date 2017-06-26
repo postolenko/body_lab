@@ -17,8 +17,11 @@
 	<link rel="stylesheet" type="text/css" href="vendors/css/animate.css">
 	<link rel="stylesheet" type="text/css" href="vendors/css/select.css" />
 	<script type="text/javascript" src="vendors/js/jquery.js"></script>
-	<script type="text/javascript" src="vendors/js/placeholders.js"></script>
 	<script type="text/javascript" src="vendors/js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<!--[if lt IE 8]>
+		<script type="text/javascript" src="vendors/js/jquery_1.js"></script>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 	<script type="text/javascript" src="slick/slick.js"></script>
 	<script type="text/javascript" src="vendors/js/select.js"></script>
 	<script type="text/javascript" src="vendors/js/wow.min.js"></script>
@@ -33,7 +36,6 @@
 <div class="wrapper">
 
 	<!-- Header -->
-	
 		<div class="header">
 			
 			<div class="row header-row offset-ziro">
@@ -73,7 +75,7 @@
 				<div class="col col-3">
 
 					<div class="social-block">
-					<!-- 	<ul class="socials wow fadeInDown">
+						<ul class="socials wow fadeInDown">
 							<li><a href="#"><i class="soc-link soc-link_1"></i></a></li>
 							<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 							<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
@@ -82,7 +84,7 @@
 							<li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
 							<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
 							<li><a href="#"><i class="soc-link soc-link_8"></i></a></li>
-						</ul> -->
+						</ul>
 					</div>
 
 				</div>
@@ -108,76 +110,48 @@
 
 				<!-- Class Inside Section 1 -->
 
-					<div class="section class-promo">
+				<div class="section class-promo">
 
-						<div class="class_bg_slider-box">
+					<div class="row">
 
-							<div class="class_bg_slider wow fadeIn" data-slider-name = "class_background-_lider">
-								<div class="slide orange-light-bottom">
-									<img src="img/slider/video_bg_1.jpg" alt="">
-									<video autoplay="autoplay" loop="loop" muted="muted" id="theVideo1">
-										<source src="video/videoplayback_1.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-										<source src="video/videoplayback_1.webm" type='video/webm; codecs="vp8, vorbis"'>
-										<source src="video/videoplayback_1.ogv" type='video/ogg; codecs="theora, vorbis"'>
-										Тег video не поддерживается вашим браузером. 
-										<a href="video/videoplayback_1.mp4">Скачайте видео</a>.
-									</video>
-								</div>
+						<h1>Zumba</h1>
+						<div class="classes_slider-box">
+							<div class="classes_slider">
 								<div class="slide">
-									<img src="img/slider/video_bg_2.jpg" alt="">
-									<video autoplay="autoplay" loop="loop" muted="muted" id="theVideo2">					
-										<source src="video/videoplayback_2.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-										Тег video не поддерживается вашим браузером. 
-										<a href="video/videoplayback_2.mp4">Скачайте видео</a>.
-									</video>
-								</div>
-							</div>
-
-						</div>
-
-
-						<div class="classes_slider-sect">
-							<div class="row">
-
-								<h1 class="wow fadeInDown">Zumba</h1>
-
-								<div class="classes_slider-box">
-
-									<div class="classes_slider wow fadeInDown">
-
-										<div class="slide">
-											<div class="img-box">
-												<img src="img/classes_slider/photo_1.jpg" alt="">
-											</div>
-										</div>
-
-										<div class="slide">
-											<div class="img-box">
-												<img src="img/classes_slider/photo_2.jpg" alt="">
-											</div>
-										</div>
-
-										<div class="slide">
-											<div class="img-box">
-												<img src="img/classes_slider/photo_3.jpg" alt="">
-											</div>
-										</div>
-
+									<div class="img-box">
+										<img src="img/classes_slider/photo_1.jpg" alt="">
 									</div>
-
 									<div class="controls-size"></div>
-
 									<div class="slide-descript">
 										<p>Zumba is a dance fitness program created by Colombian dancer and choreographer Alberto "Beto" Perez during the 1990s. Zumba is a trademark owned by Zumba Fitness, LLC. The Brazilian pop singer Claudia Leitte has become the international ambassador to Zumba Fitness. Zumba involves dance and aerobic movements performed to energetic music. The choreography incorporates hip-hop, soca, samba, salsa, merengue and mambo. Squats and lunges are also included. Zumba Fitness, the owner of the Zumba program, does not charge licensing fees to gyms or fitness centers. Approximately 15 million people take weekly Zumba classes in over 200,000 locations across 180 countries.</p>
 									</div>
-
 								</div>
 
-							</div>
+								<div class="slide">
+									<div class="img-box">
+										<img src="img/classes_slider/photo_2.jpg" alt="">
+									</div>
+									<div class="controls-size"></div>
+									<div class="slide-descript">
+										<p>Zumba is a dance fitness program created by Colombian dancer and choreographer Alberto "Beto" Perez during the 1990s. Zumba is a trademark owned by Zumba Fitness, LLC. The Brazilian pop singer Claudia Leitte has become the international ambassador to Zumba Fitness. Zumba involves dance and aerobic movements performed to energetic music.</p>
+									</div>
+								</div>
 
+								<div class="slide">
+									<div class="img-box">
+										<img src="img/classes_slider/photo_3.jpg" alt="">
+									</div>
+									<div class="controls-size"></div>
+									<div class="slide-descript">
+										<p>Zumba is a dance fitness program created by Colombian dancer and choreographer Alberto "Beto" Perez during the 1990s. Zumba is a trademark owned by Zumba Fitness, LLC. The Brazilian pop singer Claudia Leitte has become the international ambassador to Zumba Fitness. Zumba involves dance and aerobic movements performed to energetic music. The choreography incorporates hip-hop, soca, samba, salsa, merengue and mambo. Squats and lunges are also included. Zumba Fitness, the owner of the Zumba program, does not charge licensing fees to gyms or fitness centers. Approximately 15 million people take weekly Zumba classes in over 200,000 locations across 180 countries.</p>
+									</div>
+								</div>
+							</div>
 						</div>
 
 					</div>
+
+				</div>
 
 				<!-- /Class Inside Section 1 -->
 
@@ -186,7 +160,7 @@
 				<div class="section section-shape">
 					<div class="row">
 						<div class="teachers-thumbnails">
-							<div class="teacher-thumbnail wow zoomIn">
+							<div class="teacher-thumbnail">
 								<a href="#" class="thumb">
 									<div class="img-box">
 										<img src="img/team_slider/teacher_photo_01.jpg" alt="">
@@ -195,7 +169,7 @@
 								</a>
 							</div>
 
-							<div class="teacher-thumbnail wow zoomIn">
+							<div class="teacher-thumbnail">
 								<a href="#" class="thumb">
 									<div class="img-box">
 										<img src="img/team_slider/teacher_photo_02.jpg" alt="">
@@ -204,7 +178,7 @@
 								</a>
 							</div>
 
-							<div class="teacher-thumbnail wow zoomIn">
+							<div class="teacher-thumbnail">
 								<a href="#" class="thumb">
 									<div class="img-box">
 										<img src="img/team_slider/teacher_photo_03.jpg" alt="">
@@ -245,7 +219,7 @@
 				</div>
 
 				<div class="col col-3 wow fadeInUp">
-					<!-- <ul class="socials">
+					<ul class="socials">
 						<li><a href="#"><i class="soc-link soc-link_1"></i></a></li>
 						<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 						<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
@@ -254,7 +228,7 @@
 						<li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
 						<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
 						<li><a href="#"><i class="soc-link soc-link_8"></i></a></li>
-					</ul> -->
+					</ul>
 				</div>
 
 			</div>
@@ -267,26 +241,26 @@
 
 		<script type="text/javascript">
 
-			// $(".promo-slider").slick({
-			//   dots: false,
-			//   speed: 700,
-			//   slidesToShow: 1,
-			//   fade: true,
-			//   autoplay: true,
-			//   autoplaySpeed: 3000
-			// });
+			$(".promo-slider").slick({
+			  dots: false,
+			  speed: 700,
+			  slidesToShow: 1,
+			  fade: true,
+			  autoplay: true,
+			  autoplaySpeed: 3000
+			});
 
-			// $(".promo-slider").on('afterChange', function(event, slick, currentSlide){
+			$(".promo-slider").on('afterChange', function(event, slick, currentSlide){
 
-   //      		$(".promo-slider .slide video").each(function() {
-   //      			videoId =  window[$(this).attr("id")];
-   //      			videoId.pause();
-   //      		});
+        		$(".promo-slider .slide video").each(function() {
+        			videoId =  window[$(this).attr("id")];
+        			videoId.pause();
+        		});
 
-   //      		videoId =  window[$(".promo-slider .slide:eq("+ currentSlide +") video").attr("id")];
-   //      		videoId.play();
+        		videoId =  window[$(".promo-slider .slide:eq("+ currentSlide +") video").attr("id")];
+        		videoId.play();
 
-			// });
+			});
 
 			$(".teachers-slider").slick({
 			  dots: false,
@@ -305,15 +279,11 @@
 			  slidesToShow: 1,
 			  slidesToScroll: 1,
 			  autoplay: true,
-			  autoplaySpeed: 16000,
-			  autoHeight : true,
-			  appendDots : $(".controls-size")
+			  autoplaySpeed: 16000
 			});
 
 
 		</script>
-
-		<script src="js/slick_scripts.js"></script>
 	
 	</div>
 

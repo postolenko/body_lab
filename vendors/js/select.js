@@ -16,47 +16,6 @@ function tamingselect()
 	var count=0;
 	var toreplace=new Array();
 	var sels=document.getElementsByTagName('select');
-
-	// -------------------------
-
-	var selectDataAttr;
-	var selectDataAttrArr = [];
-	var optionDataAttr;
-	var optionDataAttrArr = [];
-
-	var indexSelect;
-	var indexSelectOption;
-
-	var selectsCount = $("select").length;
-	var dropContainerIndex;
-	var dropContainerLiIndex;
-	var attrVal;
-
-	// -------------------------
-
-	if( $("select").length > 0 ) {
-
-		for( indexSelect = 0; indexSelect <= selectsCount - 1; indexSelect++ ) {
-			
-			$("select:eq("+ indexSelect +")").attr("data-select", indexSelect);
-
-			selectDataAttrArr.push( $("select:eq("+ indexSelect +")").attr("data-select") );
-
-			optionDataAttrArr[indexSelect] = [];
-
-			for( indexSelectOption = 0; indexSelectOption <= $("select:eq("+ indexSelect +") option").length - 1;  indexSelectOption++ ) {
-
-				optionDataAttr = $("select:eq("+ indexSelect +") option:eq("+ indexSelectOption +")").attr("data-option");
-
-				optionDataAttrArr[indexSelect][indexSelectOption] = optionDataAttr;
-
-			}
-
-		}
-
-	}
-
-
 	for(var i=0;i<sels.length;i++){
 		if (ts_check(sels[i],ts_selectclass))
 		{
@@ -138,26 +97,6 @@ function tamingselect()
 	for(i=0;i<count;i++){
 		toreplace[i].parentNode.removeChild(toreplace[i]);
 	}
-
-	// var dropContainerIndex;
-	// var dropContainerLiIndex;
-	// var attrVal;
-
-    for(dropContainerIndex = 0; dropContainerIndex <= selectsCount - 1; dropContainerIndex++) {
-
-    	$(".dropcontainer:eq("+ dropContainerIndex +") ul").attr("data-select", selectDataAttrArr[dropContainerIndex]);
-
-    	for(dropContainerLiIndex = 0;  dropContainerLiIndex <= $(".dropcontainer:eq("+ dropContainerIndex +") ul li").length - 1; dropContainerLiIndex++ ) {
-
-    		attrVal = optionDataAttrArr[dropContainerIndex][dropContainerLiIndex];
-
-    		$(".dropcontainer:eq("+ dropContainerIndex +") ul li:eq("+ dropContainerLiIndex +")").attr("data-option", attrVal );
-
-    	}
-
-    }
-
-
 	function ts_check(o,c)
 	{
 	 	return new RegExp('\\b'+c+'\\b').test(o.className);
@@ -176,9 +115,5 @@ function tamingselect()
 window.onload=function()
 {
 	tamingselect();
-
+	// add more functions if necessary
 }
-
-
-
-

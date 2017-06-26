@@ -1,17 +1,9 @@
 if( document.getElementsByClassName("map-box")[0] ) {
 
-	var w = window,
-    d = document,
-    e = d.documentElement,
-    g = d.getElementsByTagName('body')[0],
-    bodyWidth = w.innerWidth || e.clientWidth || g.clientWidth;
-
 	var map;
 
 	var marker;
-	var markerPosiionLat;
-	var markerPosiionLng;
-	var image = '/front/img/map_marker.png';
+	var image = 'img/map_marker.png';
 
 	var styles;
 
@@ -197,25 +189,12 @@ if( document.getElementsByClassName("map-box")[0] ) {
 			zoom: 13,
 			disableDefaultUI: true
 		});
-		
-
-		if( bodyWidth <= 600 ) {
-
-			markerPosiionLat = 31.1821768;
-			markerPosiionLng = 121.4483275;
-
-		} else {
-
-			markerPosiionLat = 31.2261768;
-			markerPosiionLng = 121.5083275;
-
-		}
 
 		marker = new google.maps.Marker({
 			map: map,
 			draggable: false,
 			animation: google.maps.Animation.DROP,
-			position: {lat: markerPosiionLat, lng: markerPosiionLng},
+			position: {lat: 31.2261768, lng: 121.5083275},
 			map: map,
 			icon: image,
 			title: 'Body Lab'

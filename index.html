@@ -12,20 +12,22 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 	<link rel="stylesheet" type="text/css" href="css/responsive.css">
-	<link rel="stylesheet" type="text/css" href="css/popup_style.css">
 	<link rel="stylesheet" type="text/css" href="slick/slick.css">
 	<link rel="stylesheet" type="text/css" href="vendors/css/jquery.mCustomScrollbar.css">
 	<link rel="stylesheet" type="text/css" href="vendors/css/animate.css">
 	<link rel="stylesheet" type="text/css" href="vendors/css/select.css" />
 	<script type="text/javascript" src="vendors/js/jquery.js"></script>
-	<script type="text/javascript" src="vendors/js/placeholders.js"></script>
 	<script type="text/javascript" src="vendors/js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<!--[if lt IE 8]>
+		<script type="text/javascript" src="vendors/js/jquery_1.js"></script>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 	<script type="text/javascript" src="slick/slick.js"></script>
 	<script type="text/javascript" src="vendors/js/select.js"></script>
 	<script type="text/javascript" src="vendors/js/wow.min.js"></script>
 	<script>new WOW().init();</script>
 	<link rel="icon" type="image/png" href="favicon/favicon.ico" sizes="16x16">	
-	<title>Body Lab</title>
+	<title>Body Lab</title>	
 
 </head>
 
@@ -56,7 +58,7 @@
 
 				</div>
 
-				<div class="col col-2 main-nav-sect">
+				<div class="col col-2 main-nav-sect scroll">
 					<div class="main-nav-block wow fadeInDown">
 						<ul class="main-nav">
 							<li><a href="#" class="active">Home</a></li>
@@ -107,13 +109,12 @@
 				<button type="button" class="scroll-to-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
 
 				<!-- Main Page Section 1 -->
-				 
 
 				<div class="section promo-section">
 					
 					<div class="promo-slider-box">
 
-						<div class="promo-slider wow fadeIn" data-slider-name = "promo-slider">
+						<div class="promo-slider wow fadeIn">
 							<div class="slide orange-light-bottom">
 								<img src="img/slider/video_bg_1.jpg" alt="">
 								<video autoplay="autoplay" loop="loop" muted="muted" id="theVideo1">
@@ -152,7 +153,7 @@
 					</div>
 
 
-					<div class="popups-section" data-popup-slider-name = "promo-slider">
+					<div class="popups-section">
 						<div class="popup-bg"></div>
 						<button type="button" class="close-slide-popup">&#10006;</button>
 
@@ -524,8 +525,7 @@
 											<input type="text" placeholder="Your email" />
 										</div>
 										<div class="sumbmit-block">
-											<!-- <button type="submit" class="submit-btn"><i class="fa fa-paper-plane" aria-hidden="true"></i></button> -->
-											<input type="submit" class="submit-btn" value="" />
+											<button type="submit" class="submit-btn"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
 										</div>
 									</form>
 								</div>
@@ -629,7 +629,7 @@
 							<div class="thumbnail">
 								<div class="inner">
 									<div class="card-img-block">
-										<div class="img-box wow zoomIn" data-card = "card_1">
+										<div class="img-box wow zoomIn">
 											<img class="card" src="img/cards/card_01.jpg" alt="">
 										</div>
 									</div>
@@ -640,7 +640,7 @@
 							<div class="thumbnail">
 								<div class="inner">
 									<div class="card-img-block">
-										<div class="img-box wow zoomIn" data-card = "card_2">
+										<div class="img-box wow zoomIn">
 											<img class="card" src="img/cards/card_02.jpg" alt="">
 										</div>
 									</div>
@@ -651,7 +651,7 @@
 							<div class="thumbnail">
 								<div class="inner">
 									<div class="card-img-block">
-										<div class="img-box wow zoomIn" data-card = "card_3">
+										<div class="img-box wow zoomIn">
 											<img class="card" src="img/cards/card_03.jpg" alt="">
 										</div>
 									</div>
@@ -662,7 +662,7 @@
 							<div class="thumbnail">
 								<div class="inner">
 									<div class="card-img-block">
-										<div class="img-box wow zoomIn" data-card = "card_4">
+										<div class="img-box wow zoomIn">
 											<img class="card" src="img/cards/card_04.jpg" alt="">
 										</div>
 									</div>
@@ -674,681 +674,139 @@
 
 					</div>
 
-					<div class="popups-cards-sect scroll">
+					<div class="popups-cards-sect">
 						<div class="popup-card-bg"></div>
 
-						<div class="cards-slider">
+						<div class="card-popup-box">
 
-							<div class="card-popup-box">
+							<div class="card-popup">
+								<div class="inner">
 
-								<div class="card-popup">
-									<div class="inner">
+									<div class="card-popup-header">
+										<h2>Adult card</h2>
+										<button type="button" class="close-card-popup"></button>
+									</div>
 
-										<div class="card-popup-header">
-											<h2>Family card</h2>
-											<button type="button" class="close-card-popup"></button>
-										</div>
-
-										<div class="card-content">
-											<div class="card-table">							
-												<div class="card-table-row">
-													<div class="cell">
-														<h3>Cart Type</h3>
-													</div>
-													<div class="cell">
-														<h3>Times</h3>
-													</div>
-													<div class="cell">
-														<h3>Prise / Time<br />(RMB)</h3>
-													</div>
-													<div class="cell">
-														<h3>Total Prise<br />(RMB)</h3>
-													</div>
+									<div class="card-content">
+										<div class="card-table">							
+											<div class="card-table-row">
+												<div class="cell">
+													<h3>Cart Type</h3>
 												</div>
-												<div class="card-table-row">
-													<div class="cell">
-														<p>Drop In</p>
-													</div>
-													<div class="cell">
-														<p>1</p>
-													</div>
-													<div class="cell">
-														<p>250</p>
-													</div>
-													<div class="cell">
-														<p>250</p>
-													</div>
+												<div class="cell">
+													<h3>Times</h3>
 												</div>
-												<div class="card-table-row">
-													<div class="cell">
-														<p>2 Month</p>
-													</div>
-													<div class="cell">
-														<p>10</p>
-													</div>
-													<div class="cell">
-														<p>200</p>
-													</div>
-													<div class="cell">
-														<p>2000</p>
-													</div>
+												<div class="cell">
+													<h3>Prise / Time<br />(RMB)</h3>
 												</div>
-												<div class="card-table-row">
-													<div class="cell">
-														<p></p>
-													</div>
-													<div class="cell">
-														<p></p>
-													</div>
-													<div class="cell">
-														<p></p>
-													</div>
-													<div class="cell">
-														<p></p>
-													</div>
+												<div class="cell">
+													<h3>Total Prise<br />(RMB)</h3>
 												</div>
-												<div class="card-table-row">
-													<div class="cell">
-														<p>4 Month</p>
-													</div>
-													<div class="cell">
-														<p>20</p>
-													</div>
-													<div class="cell">
-														<p>180</p>
-													</div>
-													<div class="cell">
-														<p>3600</p>
-													</div>
+											</div>
+											<div class="card-table-row">
+												<div class="cell">
+													<p>Drop In</p>
 												</div>
-												<div class="card-table-row">
-													<div class="cell">
-														<p>6 Month</p>
-													</div>
-													<div class="cell">
-														<p>50</p>
-													</div>
-													<div class="cell">
-														<p>150</p>
-													</div>
-													<div class="cell">
-														<p>7500</p>
-													</div>
+												<div class="cell">
+													<p>1</p>
 												</div>
-												<div class="card-table-row">
-													<div class="cell">
-														<p>10 Month</p>
-													</div>
-													<div class="cell">
-														<p>80</p>
-													</div>
-													<div class="cell">
-														<p>130</p>
-													</div>
-													<div class="cell">
-														<p>10400</p>
-													</div>
+												<div class="cell">
+													<p>250</p>
 												</div>
-												<div class="card-table-row">
-													<div class="cell">
-														<p>1 Year</p>
-													</div>
-													<div class="cell">
-														<p>130</p>
-													</div>
-													<div class="cell">
-														<p>100</p>
-													</div>
-													<div class="cell">
-														<p>13000</p>
-													</div>
+												<div class="cell">
+													<p>250</p>
+												</div>
+											</div>
+											<div class="card-table-row">
+												<div class="cell">
+													<p>2 Month</p>
+												</div>
+												<div class="cell">
+													<p>10</p>
+												</div>
+												<div class="cell">
+													<p>200</p>
+												</div>
+												<div class="cell">
+													<p>2000</p>
+												</div>
+											</div>
+											<div class="card-table-row">
+												<div class="cell">
+													<p></p>
+												</div>
+												<div class="cell">
+													<p></p>
+												</div>
+												<div class="cell">
+													<p></p>
+												</div>
+												<div class="cell">
+													<p></p>
+												</div>
+											</div>
+											<div class="card-table-row">
+												<div class="cell">
+													<p>4 Month</p>
+												</div>
+												<div class="cell">
+													<p>20</p>
+												</div>
+												<div class="cell">
+													<p>180</p>
+												</div>
+												<div class="cell">
+													<p>3600</p>
+												</div>
+											</div>
+											<div class="card-table-row">
+												<div class="cell">
+													<p>6 Month</p>
+												</div>
+												<div class="cell">
+													<p>50</p>
+												</div>
+												<div class="cell">
+													<p>150</p>
+												</div>
+												<div class="cell">
+													<p>7500</p>
+												</div>
+											</div>
+											<div class="card-table-row">
+												<div class="cell">
+													<p>10 Month</p>
+												</div>
+												<div class="cell">
+													<p>80</p>
+												</div>
+												<div class="cell">
+													<p>130</p>
+												</div>
+												<div class="cell">
+													<p>10400</p>
+												</div>
+											</div>
+											<div class="card-table-row">
+												<div class="cell">
+													<p>1 Year</p>
+												</div>
+												<div class="cell">
+													<p>130</p>
+												</div>
+												<div class="cell">
+													<p>100</p>
+												</div>
+												<div class="cell">
+													<p>13000</p>
 												</div>
 											</div>
 										</div>
-
 									</div>
 
 								</div>
 
 							</div>
-
-
-							<!-- Кнопка Buy исправлена на кнопку
-
-							Добавлен попап Quarcode
-
-							 -->
-
-							<div class="card-popup-box blue">
-
-								<div class="card-popup">
-									<div class="inner">
-
-										<div class="card-popup-header">
-											<h2>Adult card</h2>
-											<button type="button" class="close-card-popup"></button>
-										</div>
-
-										<div class="card-content dark"  data-quarcode-popup = "quarcodes_1">
-											<div class="card-table">							
-												<div class="card-table-row">
-													<div class="cell">
-														<h3>Cart Type</h3>
-													</div>
-													<div class="cell">
-														<h3>Times</h3>
-													</div>
-													<div class="cell">
-														<h3>Prise / Time<br />(RMB)</h3>
-													</div>
-													<div class="cell">
-														<h3>Total Prise<br />(RMB)</h3>
-													</div>
-													<div class="cell">
-														
-													</div>
-												</div>
-												<div class="card-table-row">
-													<div class="cell">
-														<p>Drop In</p>
-													</div>
-													<div class="cell">
-														<p>1</p>
-													</div>
-													<div class="cell">
-														<p>250</p>
-													</div>
-													<div class="cell">
-														<p>250</p>
-													</div>
-													<div class="cell">
-														<button type="button" class="buy-card-btn">Buy</button>
-													</div>
-												</div>
-												<div class="card-table-row">
-													<div class="cell">
-														<p>2 Month</p>
-													</div>
-													<div class="cell">
-														<p>10</p>
-													</div>
-													<div class="cell">
-														<p>200</p>
-													</div>
-													<div class="cell">
-														<p>2000</p>
-													</div>
-													<div class="cell">
-														<button type="button" class="buy-card-btn">Buy</button>
-													</div>
-												</div>
-												<div class="card-table-row">
-													<div class="cell">
-														<p>4 Month</p>
-													</div>
-													<div class="cell">
-														<p>20</p>
-													</div>
-													<div class="cell">
-														<p>180</p>
-													</div>
-													<div class="cell">
-														<p>3600</p>
-													</div>
-													<div class="cell">
-														<button type="button" class="buy-card-btn">Buy</button>
-													</div>
-												</div>
-												<div class="card-table-row">
-													<div class="cell">
-														<p>6 Month</p>
-													</div>
-													<div class="cell">
-														<p>50</p>
-													</div>
-													<div class="cell">
-														<p>150</p>
-													</div>
-													<div class="cell">
-														<p>7500</p>
-													</div>
-													<div class="cell">
-														<button type="button" class="buy-card-btn">Buy</button>
-													</div>
-												</div>
-												<div class="card-table-row">
-													<div class="cell">
-														<p>10 Month</p>
-													</div>
-													<div class="cell">
-														<p>80</p>
-													</div>
-													<div class="cell">
-														<p>130</p>
-													</div>
-													<div class="cell">
-														<p>10400</p>
-													</div>
-													<div class="cell">
-														<button type="button" class="buy-card-btn">Buy</button>
-													</div>
-												</div>
-												<div class="card-table-row">
-													<div class="cell">
-														<p>1 Year</p>
-													</div>
-													<div class="cell">
-														<p>130</p>
-													</div>
-													<div class="cell">
-														<p>100</p>
-													</div>
-													<div class="cell">
-														<p>13000</p>
-													</div>
-													<div class="cell">
-														<button type="button" class="buy-card-btn">Buy</button>
-													</div>
-												</div>
-											</div>
-										</div>
-
-										<div class="card-content payment-card dark"  data-quarcode-popup-name = "quarcodes_1">
-
-												<form>
-
-													<div class="qa-thumbnails offset-ziro">
-
-														<div class="thumbnail">
-															<div class="inner">
-																<div class="qa-box">
-																	<img src="img/qa_01.jpg" alt="">
-																</div>
-																<div class="qa-bottom-row">
-																	<a href="#">
-																		<img src="img/chat_icon.png" alt="">
-																	</a>
-																</div>
-															</div>
-														</div>
-
-														<div class="thumbnail">
-															<div class="inner">
-																<div class="qa-box">
-																	<img src="img/qa/qa_02.png" alt="">
-																</div>
-																<div class="qa-bottom-row">
-																	<a href="#">
-																		<img src="img/alipay.png" alt="">
-																	</a>
-																</div>
-															</div>
-														</div>
-
-													</div>
-									
-													<p>You can pay now or when you come to us</p>
-
-													<div class="submit-block">
-														<button type="submit" class="close-quarcode-ok">Ok</button>
-													</div>
-
-												</form>
-
-										</div>
-
-									</div>
-
-								</div>
-
-							</div>
-
-							<!-- /В этом поппе добавлена кнопочка Buy -->							
-
-							<div class="card-popup-box">
-
-								<div class="card-popup">
-									<div class="inner">
-
-										<div class="card-popup-header">
-											<h2>Children's card</h2>
-											<button type="button" class="close-card-popup"></button>
-										</div>
-
-										<div class="card-content" data-quarcode-popup = "quarcodes_2">
-											<div class="card-table">							
-												<div class="card-table-row">
-													<div class="cell">
-														<h3>Cart Type</h3>
-													</div>
-													<div class="cell">
-														<h3>Times</h3>
-													</div>
-													<div class="cell">
-														<h3>Prise / Time<br />(RMB)</h3>
-													</div>
-													<div class="cell">
-														<h3>Total Prise<br />(RMB)</h3>
-													</div>
-													<div class="cell">
-														
-													</div>
-												</div>
-												<div class="card-table-row">
-													<div class="cell">
-														<p>Drop In</p>
-													</div>
-													<div class="cell">
-														<p>1</p>
-													</div>
-													<div class="cell">
-														<p>250</p>
-													</div>
-													<div class="cell">
-														<p>250</p>
-													</div>
-													<div class="cell">
-														<button type="button" class="buy-card-btn">Buy</button>
-													</div>
-												</div>
-												<div class="card-table-row">
-													<div class="cell">
-														<p>2 Month</p>
-													</div>
-													<div class="cell">
-														<p>10</p>
-													</div>
-													<div class="cell">
-														<p>200</p>
-													</div>
-													<div class="cell">
-														<p>2000</p>
-													</div>
-													<div class="cell">
-														<button type="button" class="buy-card-btn">Buy</button>
-													</div>
-												</div>
-												<div class="card-table-row">
-													<div class="cell">
-														<p>4 Month</p>
-													</div>
-													<div class="cell">
-														<p>20</p>
-													</div>
-													<div class="cell">
-														<p>180</p>
-													</div>
-													<div class="cell">
-														<p>3600</p>
-													</div>
-													<div class="cell">
-														<button type="button" class="buy-card-btn">Buy</button>
-													</div>
-												</div>
-												<div class="card-table-row">
-													<div class="cell">
-														<p>6 Month</p>
-													</div>
-													<div class="cell">
-														<p>50</p>
-													</div>
-													<div class="cell">
-														<p>150</p>
-													</div>
-													<div class="cell">
-														<p>7500</p>
-													</div>
-													<div class="cell">
-														<button type="button" class="buy-card-btn">Buy</button>
-													</div>
-												</div>
-												<div class="card-table-row">
-													<div class="cell">
-														<p>10 Month</p>
-													</div>
-													<div class="cell">
-														<p>80</p>
-													</div>
-													<div class="cell">
-														<p>130</p>
-													</div>
-													<div class="cell">
-														<p>10400</p>
-													</div>
-													<div class="cell">
-														<button type="button" class="buy-card-btn">Buy</button>
-													</div>
-												</div>
-												<div class="card-table-row">
-													<div class="cell">
-														<p>1 Year</p>
-													</div>
-													<div class="cell">
-														<p>130</p>
-													</div>
-													<div class="cell">
-														<p>100</p>
-													</div>
-													<div class="cell">
-														<p>13000</p>
-													</div>
-													<div class="cell">
-														<button type="button" class="buy-card-btn">Buy</button>
-													</div>
-												</div>
-											</div>
-										</div>
-
-										<div class="card-content payment-card dark"  data-quarcode-popup-name = "quarcodes_2">
-
-												<form>
-
-													<div class="qa-thumbnails offset-ziro">
-
-														<div class="thumbnail">
-															<div class="inner">
-																<div class="qa-box">
-																	<img src="img/qa_01.jpg" alt="">
-																</div>
-																<div class="qa-bottom-row">
-																	<a href="#">
-																		<img src="img/chat_icon.png" alt="">
-																	</a>
-																</div>
-															</div>
-														</div>
-
-														<div class="thumbnail">
-															<div class="inner">
-																<div class="qa-box">
-																	<img src="img/qa/qa_02.png" alt="">
-																</div>
-																<div class="qa-bottom-row">
-																	<a href="#">
-																		<img src="img/alipay.png" alt="">
-																	</a>
-																</div>
-															</div>
-														</div>
-
-													</div>
-									
-													<p>You can pay now or when you come to us  2</p>
-
-													<div class="submit-block">
-														<button type="submit" class="close-quarcode-ok">Ok</button>
-													</div>
-
-												</form>
-
-										</div>
-
-									</div>
-
-								</div>
-
-							</div>
-
-							<div class="card-popup-box blue">
-
-								<div class="card-popup">
-									<div class="inner">
-
-										<div class="card-popup-header">
-											<h2>vip card</h2>
-											<button type="button" class="close-card-popup"></button>
-										</div>
-
-										<div class="card-content">
-											<div class="card-table">
-												<div class="card-table-row">
-													<div class="cell">
-														<h3>Cart Type</h3>
-													</div>
-													<div class="cell">
-														<h3>Times</h3>
-													</div>
-													<div class="cell">
-														<h3>Prise / Time<br />(RMB)</h3>
-													</div>
-													<div class="cell">
-														<h3>Total Prise<br />(RMB)</h3>
-													</div>
-												</div>
-												<div class="card-table-row">
-													<div class="cell">
-														<p>Drop In</p>
-													</div>
-													<div class="cell">
-														<p>1</p>
-													</div>
-													<div class="cell">
-														<p>250</p>
-													</div>
-													<div class="cell">
-														<p>250</p>
-													</div>
-												</div>
-												<div class="card-table-row">
-													<div class="cell">
-														<p>2 Month</p>
-													</div>
-													<div class="cell">
-														<p>10</p>
-													</div>
-													<div class="cell">
-														<p>200</p>
-													</div>
-													<div class="cell">
-														<p>2000</p>
-													</div>
-												</div>
-												<div class="card-table-row">
-													<div class="cell">
-														<p>4 Month</p>
-													</div>
-													<div class="cell">
-														<p>20</p>
-													</div>
-													<div class="cell">
-														<p>180</p>
-													</div>
-													<div class="cell">
-														<p>3600</p>
-													</div>
-												</div>
-												<div class="card-table-row">
-													<div class="cell">
-														<p>6 Month</p>
-													</div>
-													<div class="cell">
-														<p>50</p>
-													</div>
-													<div class="cell">
-														<p>150</p>
-													</div>
-													<div class="cell">
-														<p>7500</p>
-													</div>
-												</div>
-												<div class="card-table-row">
-													<div class="cell">
-														<p>10 Month</p>
-													</div>
-													<div class="cell">
-														<p>80</p>
-													</div>
-													<div class="cell">
-														<p>130</p>
-													</div>
-													<div class="cell">
-														<p>10400</p>
-													</div>
-												</div>
-												<div class="card-table-row">
-													<div class="cell">
-														<p>1 Year</p>
-													</div>
-													<div class="cell">
-														<p>130</p>
-													</div>
-													<div class="cell">
-														<p>100</p>
-													</div>
-													<div class="cell">
-														<p>13000</p>
-													</div>
-												</div>
-											</div>
-										</div>
-
-									</div>
-
-								</div>
-
-							</div>
-
-
-							<!-- Новые попапы -->
-
-
-							<div class="card-popup-box blue">
-
-								<div class="card-popup form-block">
-									<div class="inner">
-
-										<div class="card-popup-header">
-											<h2>Checkout</h2>
-											<button type="button" class="close-card-popup"></button>
-										</div>
-
-										<div class="card-content dark form-block">
-
-											<form>
-								
-												<div class="input-block">
-													<input type="text" placeholder="Name" />
-												</div>
-
-												<div class="input-block">
-													<input type="tel" placeholder="Phone" />
-												</div>
-
-												<div class="submit-block">
-													<button type="submit">Send</button>
-												</div>
-
-											</form>
-
-										</div>
-
-									</div>
-
-								</div>
-
-							</div>
-
-							<!-- .Новые попапы -->
 
 						</div>
 
@@ -1406,16 +864,6 @@
 		<script src="js/scripts.js"></script>
 
 		<script type="text/javascript">
-
-			(function($){
-
-				$(window).on("load",function(){
-
-					$(".scroll").mCustomScrollbar();
-
-				});
-
-			})(jQuery);		
 
 			$(".promo-slider").slick({
 			  dots: false,
@@ -1479,7 +927,6 @@
 			});
 
 		</script>
-		<script src="js/team_slider.js"></script>
 	
 	</div>
 

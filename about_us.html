@@ -18,8 +18,11 @@
 	<link rel="stylesheet" type="text/css" href="vendors/css/animate.css">
 	<link rel="stylesheet" type="text/css" href="vendors/css/select.css" />
 	<script type="text/javascript" src="vendors/js/jquery.js"></script>
-	<script type="text/javascript" src="vendors/js/placeholders.js"></script>
 	<script type="text/javascript" src="vendors/js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<!--[if lt IE 8]>
+		<script type="text/javascript" src="vendors/js/jquery_1.js"></script>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 	<script type="text/javascript" src="slick/slick.js"></script>
 	<script type="text/javascript" src="vendors/js/select.js"></script>
 	<script type="text/javascript" src="vendors/js/wow.min.js"></script>
@@ -112,10 +115,10 @@
 					
 					<div class="about-us-slider-box">
 
-						<div class="about-us-slider wow fadeIn" data-slider-name = "about-us-slider">
+						<div class="about-us-slider wow fadeIn">
 							<div class="slide orange-light-bottom">
 								<img src="img/slider/video_bg_1.jpg" alt="">
-								<video autoplay="autoplay" loop="loop" muted="muted" id="theVideo1" class="Video">
+								<video autoplay="autoplay" loop="loop" muted="muted" id="theVideo1">
 									<source src="video/videoplayback_1.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
 									<source src="video/videoplayback_1.webm" type='video/webm; codecs="vp8, vorbis"'>
 									<source src="video/videoplayback_1.ogv" type='video/ogg; codecs="theora, vorbis"'>
@@ -141,35 +144,18 @@
 							</div>
 							<div class="slide">
 								<img src="img/slider/video_bg_2.jpg" alt="">
-								<!-- <video autoplay="autoplay" loop="loop" muted="muted" id="theVideo2">					
+								<video autoplay="autoplay" loop="loop" muted="muted" id="theVideo2">					
 									<source src="video/videoplayback_2.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
 									Тег video не поддерживается вашим браузером. 
 									<a href="video/videoplayback_2.mp4">Скачайте видео</a>.
-								</video> -->
-							</div>
-
-							<div class="slide">
-								<img src="/front/img/slider/video_bg_2.jpg" alt="">
-								<!-- <video autoplay="autoplay" loop="loop" muted="muted" id="theVideo2">					
-									<source src="/front/video/videoplayback_2.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-									Тег video не поддерживается вашим браузером. 
-									<a href="video/videoplayback_2.mp4">Скачайте видео</a>.
-								</video> -->
-							</div>
-							<div class="slide">
-								<img src="/front/img/slider/video_bg_2.jpg" alt="">
-								<!-- <video autoplay="autoplay" loop="loop" muted="muted" id="theVideo2">					
-									<source src="/front/video/videoplayback_2.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-									Тег video не поддерживается вашим браузером. 
-									<a href="video/videoplayback_2.mp4">Скачайте видео</a>.
-								</video> -->
+								</video>
 							</div>
 						</div>
 
 					</div>
 
 
-					<div class="popups-section" data-popup-slider-name = "about-us-slider">
+					<div class="popups-section" data-slider-name = "about-us-slider">
 						<div class="popup-bg"></div>
 						<button type="button" class="close-slide-popup">&#10006;</button>
 
@@ -287,27 +273,15 @@
 			  autoplaySpeed: 3000
 			});
 
-			$(".promo-slider").on('beforeChange', function(event, slick, currentSlide, nextSlide){
+			$(".promo-slider").on('afterChange', function(event, slick, currentSlide){
 
-        		$(".promo-slider .slide").each(function() {
-
-        			if( $(".promo-slider .slide:eq("+ currentSlide +") video").length > 0) {
-
-	        			videoId =  window[$(".promo-slider .slide:eq("+ currentSlide +") video").attr("id")];
-
-	        			videoId.pause();
-
-	        		}
-
+        		$(".promo-slider .slide video").each(function() {
+        			videoId =  window[$(this).attr("id")];
+        			videoId.pause();
         		});
 
-        		if( $(".promo-slider .slide:eq("+ nextSlide +") video").length > 0 ) {
-
-        			videoId =  window[$(".promo-slider .slide:eq("+ nextSlide +") video").attr("id")];
-
-        			videoId.play();
-
-        		}        		
+        		videoId =  window[$(".promo-slider .slide:eq("+ currentSlide +") video").attr("id")];
+        		videoId.play();
 
 			});
 
@@ -320,27 +294,15 @@
 			  autoplaySpeed: 3000
 			});
 
-			$(".about-us-slider").on('beforeChange', function(event, slick, currentSlide, nextSlide){
+			$(".about-us-slider").on('afterChange', function(event, slick, currentSlide){
 
-        		$(".about-us-slider .slide").each(function() {
-
-        			if( $(".about-us-slider .slide:eq("+ currentSlide +") video").length > 0) {
-
-	        			videoId =  window[$(".about-us-slider .slide:eq("+ currentSlide +") video").attr("id")];
-
-	        			videoId.pause();
-
-	        		}
-
+        		$(".about-us-slider .slide video").each(function() {
+        			videoId =  window[$(this).attr("id")];
+        			videoId.pause();
         		});
 
-        		if( $(".about-us-slider .slide:eq("+ nextSlide +") video").length > 0 ) {
-
-        			videoId =  window[$(".about-us-slider .slide:eq("+ nextSlide +") video").attr("id")];
-
-        			videoId.play();
-
-        		}        		
+        		videoId =  window[$(".about-us-slider .slide:eq("+ currentSlide +") video").attr("id")];
+        		videoId.play();
 
 			});
 
@@ -355,7 +317,6 @@
 
 
 		</script>
-		<script src="js/team_slider.js"></script>
 	
 	</div>
 
